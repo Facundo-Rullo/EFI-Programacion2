@@ -1,0 +1,9 @@
+.fondoLogin {
+    background-color: #1f2937;
+}
+
+.dis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
