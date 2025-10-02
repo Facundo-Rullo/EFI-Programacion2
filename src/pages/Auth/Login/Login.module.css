@@ -2,8 +2,11 @@
     background-color: #1f2937;
 }
 
-.dis {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btnLoginSesion {
+    background: linear-gradient(90deg, #8A2BE2, #6A0DAD);
 }
+
+.forgotPass {
+    color: #8A2BE2;
+}
+
