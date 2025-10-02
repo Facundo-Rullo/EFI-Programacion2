@@ -13,7 +13,7 @@ function ForgotPassword() {
       navigate('/'); 
     };
   return (
-    <div className={`flex justify-content-center align-items-center lg:h-screen ${ForgotPassCSS.content}`}>
+    <div className={`flex justify-content-center align-items-center ${ForgotPassCSS.content}`}>
       <div className={`
               flex 
               justify-content-center 

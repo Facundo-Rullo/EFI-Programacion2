@@ -14,7 +14,7 @@ const Login = () => {
     };
     const [checked, setChecked] = useState(false);
   return (
-    <div className={`flex justify-content-center align-items-center lg:h-screen ${LoginCSS.content}`} >
+    <div className={`flex justify-content-center align-items-center ${LoginCSS.content}`} >
         <div className={`
                 flex 
                 justify-content-center 
@@ -34,16 +34,16 @@ const Login = () => {
         
             <form className="lg:w-25rem">
                 <div className="flex flex-column gap-2 w-full mb-4">
-                        <label htmlFor="username">CUIT</label>
-                        <InputText id="username" aria-describedby="username-help" className="bg-transparent text-white" />
-                        <small id="username-help" style={{ color: "red" }} className="hidden">
+                        <label htmlFor="cuit">CUIT</label>
+                        <InputText id="cuit" aria-describedby="cuit-help" className="bg-transparent text-white" />
+                        <small id="cuit-help" style={{ color: "red" }} className="hidden">
                             !!!!!!!!!!!!!!AGREGAR VALIDACIONNN!!!!!!!!!!!!!!!
                         </small>
                 </div>
                 <div className="flex flex-column gap-2 w-full">
-                        <label htmlFor="username">Contraseña</label>
-                        <InputText type="password" id="username" aria-describedby="username-help" className="bg-transparent text-white"/>
-                        <small id="username-help" style={{ color: "red" }} className="hidden">
+                        <label htmlFor="password">Contraseña</label>
+                        <InputText type="password" id="password" aria-describedby="password-help" className="bg-transparent text-white"/>
+                        <small id="password-help" style={{ color: "red" }} className="hidden">
                             !!!!!!!!!!!!!!AGREGAR VALIDACIONNN!!!!!!!!!!!!!!!
                         </small>
                 </div>
