@@ -1,12 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "../pages/Auth/Login/Login";
-// import Home from "../pages/Home";
+import ForgotPassword from "../pages/Auth/ForgotPassword/ForgotPassword";
 
 const AppRoutes = ({ userLoggedIn }) => {
   return (
     <Routes>
       <Route path="/" element={userLoggedIn ? <Navigate to="/home" /> : <Login />} />
-      {/* <Route path="/home" element={<Home />} /> */}
+      <Route path="/recuperarContrasenia" element={<ForgotPassword />} />
     </Routes>
   );
 };

@@ -46,7 +46,7 @@ const Login = () => {
                     <Checkbox inputId='checkLogin' onChange={e => setChecked(e.checked)} checked={checked} className={`${LoginCSS.che}`}></Checkbox>
                     <label htmlFor="checkLogin" className="ml-2" >Recordarme</label>
                 </div>
-                <a href="#" className={`ml-2 ${LoginCSS.forgotPass}`}>¿Olvidaste tu contraseña?</a>
+                <a href="/recuperarContrasenia" className={`ml-2 ${LoginCSS.forgotPass}`}>¿Olvidaste tu contraseña?</a>
             </div>
             <Button type="submit" label="Iniciar Sesión" className={`w-full ${LoginCSS.btnLoginSesion} border-none`}/>
         </form>
