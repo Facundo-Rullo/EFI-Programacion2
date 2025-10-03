@@ -2,13 +2,18 @@ import './App.css'
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import BreadCrumbRoute from "./components/BreadCrumbRoute/BreadCrumbRoute";
+
 
 
 function App() {
   return (
     <div className = "h-screen" >
         <Header />
-        <div className=" p-4">
+        <div className='px-4 pt-3'>
+          <BreadCrumbRoute />
+        </div>
+        <div className=" p-4 h-screen">
           <Outlet />
         </div>
         <Footer />

@@ -2,7 +2,7 @@ import React from 'react';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { Link, useLocation } from 'react-router-dom';
 
-export default function CustomBreadCrumb() {
+export default function BreadCrumbRoute() {
   const location = useLocation();
 
   // 🔍 Partes de la URL
@@ -34,7 +34,7 @@ export default function CustomBreadCrumb() {
 
   return (
     <div>
-      <BreadCrumb model={items} home={home} className="bg-transparent " />
+      <BreadCrumb model={items} home={home} className="bg-transparent p-2 border-none" />
     </div>
   );
 }

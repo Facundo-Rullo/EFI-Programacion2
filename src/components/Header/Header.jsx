@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { Avatar } from "primereact/avatar";
 import { Button } from "primereact/button";
-import CustomBreadCrumb from "../BreadCrumb/BreadCrumb";
 import HeadlessDemo from "../Menu/Menu"; // Este es tu Sidebar
+import PopupUser from '../PopupUser/PopupUser'
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
-
+  
   return (
-    <div className="flex justify-content-between align-items-center p-3 text-white shadow-2">
+    <div className="flex justify-content-between align-items-center py-3 px-4 text-white shadow-2">
       <div className="flex gap-4 text-lg font-semibold align-items-center">
         <Button
           icon={
@@ -19,8 +18,6 @@ export default function Header() {
           aria-expanded={menuVisible}
           className="bg-transparent text-white border-none"
         />
-
-        <CustomBreadCrumb />
       </div>
 
       <div className="flex gap-3 align-items-center">
@@ -32,10 +29,9 @@ export default function Header() {
           icon={<span className="pi pi-cog" style={{ fontSize: "1.5rem" }} />}
           className="p-button-rounded p-button-text text-white"
         />
-        <Avatar label="JY" size="large" shape="circle" />
+        <PopupUser/>
       </div>
-
-      {/* 🔥 Sidebar controlado desde el header */}
+        
       <HeadlessDemo
         visible={menuVisible}
         onHide={() => setMenuVisible(false)}
