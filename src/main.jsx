@@ -7,11 +7,12 @@ import 'primereact/resources/themes/lara-light-indigo/theme.css';  // Tema
 import 'primereact/resources/primereact.min.css';                  // Componentes
 import 'primeicons/primeicons.css';                                // Iconos
 import 'primeflex/primeflex.css';                                   // Flex y utilidades (opcional)
+import AppRouter from './routes/AppRoutes.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <AppRouter />
     </BrowserRouter>
   </StrictMode>,
 )

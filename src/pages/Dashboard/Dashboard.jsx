@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import 'primereact/resources/themes/lara-dark-indigo/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeflex/primeflex.css';
 
-function Dashboard() {
+export default function App() {
   return (
-    <>
-     <p>Hola Mundo</p> 
-    </>
-  )
+    <div className="">
+        <p>asd</p>
+    </div>
+  );
 }
-
-export default Dashboard

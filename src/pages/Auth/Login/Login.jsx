@@ -54,7 +54,7 @@ const Login = () => {
                     </div>
                     <a href="/recuperarContrasenia" className={`ml-2 ${LoginCSS.forgotPass}`}>¿Olvidaste tu contraseña?</a>
                 </div>
-                <Button type="submit" label="Iniciar Sesión" className={`w-full ${LoginCSS.btnLoginSesion} border-none`} onClick={() => irADashboard()}/>
+                <Button type="submit" label="Iniciar Sesión" className={`w-full ${LoginCSS.btnLoginSesion} border-none text-white`} onClick={() => irADashboard()}/>
             </form>
         </div>
     </div>
