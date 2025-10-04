@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button } from "primereact/button";
 import HeadlessDemo from "../Menu/Menu"; // Este es tu Sidebar
 import PopupUser from '../PopupUser/PopupUser'
+import UserCustomizations from '../UserCustomizations/UserCustomizations'
+
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -25,10 +27,7 @@ export default function Header() {
           icon={<span className="pi pi-bell" style={{ fontSize: "1.5rem" }} />}
           className="p-button-rounded p-button-text text-white"
         />
-        <Button
-          icon={<span className="pi pi-cog" style={{ fontSize: "1.5rem" }} />}
-          className="p-button-rounded p-button-text text-white"
-        />
+        <UserCustomizations/>
         <PopupUser/>
       </div>
         

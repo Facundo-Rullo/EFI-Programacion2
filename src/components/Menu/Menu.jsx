@@ -18,8 +18,7 @@ export default function HeadlessDemo({ visible, onHide }) {
       onHide={onHide}
       role="region"
       aria-modal="true"
-      className="w-20rem"
-      content={({ closeIconRef, hide }) => (
+      content={({ closeIconRef }) => (
         <div className="min-h-screen flex relative lg:static surface-ground">
           <div
             id="app-sidebar-2"
