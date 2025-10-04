@@ -13,7 +13,7 @@ function App() {
         <div className='px-4 pt-3'>
           <BreadCrumbRoute />
         </div>
-        <div className=" p-4 h-screen">
+        <div className=" p-4 ">
           <Outlet />
         </div>
         <Footer />
