@@ -3,6 +3,7 @@ import { Button } from "primereact/button";
 import HeadlessDemo from "../Menu/Menu"; // Este es tu Sidebar
 import PopupUser from '../PopupUser/PopupUser'
 import UserCustomizations from '../UserCustomizations/UserCustomizations'
+import Notifications from '../Notifications/Notifications'
 
 
 export default function Header() {
@@ -23,10 +24,7 @@ export default function Header() {
       </div>
 
       <div className="flex gap-3 align-items-center">
-        <Button
-          icon={<span className="pi pi-bell" style={{ fontSize: "1.5rem" }} />}
-          className="p-button-rounded p-button-text text-white"
-        />
+        <Notifications/>
         <UserCustomizations/>
         <PopupUser/>
       </div>
