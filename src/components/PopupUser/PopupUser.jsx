@@ -1,11 +1,13 @@
 
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TieredMenu } from 'primereact/tieredmenu';
 import { Avatar } from "primereact/avatar";
 
 
 export default function PopupUser() {
     const menu = useRef(null);
+    const navigate = useNavigate();
     const items = [
         {
             label: 'Cambiar Avatar',
@@ -35,6 +37,7 @@ export default function PopupUser() {
         {
             label: 'Cerrar Sesion',
             icon: 'pi pi-sign-out',
+            command: () => navigate('/login')
         }
     ];
 

@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(180deg, #2e323f, #0a061a);
+  background: linear-gradient(180deg, #404555, #0a061a);
   /* background-color: #111827; */
   /* background-color: #2d313e; */
 
@@ -17,3 +17,4 @@ html, body {
   margin: 0;
   padding: 0;
 }
+

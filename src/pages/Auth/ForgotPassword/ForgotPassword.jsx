@@ -9,8 +9,8 @@ import { Button } from 'primereact/button';
 
 function ForgotPassword() {
     const navigate = useNavigate();
-    const irADashboard = () => {
-      navigate('/dashboard'); 
+    const irALogin = () => {
+      navigate('/login'); 
     };
   return (
     <div className={`flex justify-content-center align-items-center ${ForgotPassCSS.content}`}>
@@ -41,7 +41,7 @@ function ForgotPassword() {
               </div>
               <div className="flex gap-3 md:gap-5 flex-wrap md:flex-nowrap">
                   <Button type="submit" label="Recuperar" className={`w-full  border-none text-white ${ForgotPassCSS.btnForgot}`}/>
-                  <Button type="button" label="Volver" className={`w-full  border-none text-white ${ForgotPassCSS.btnForgot}`} onClick={() => irADashboard()}/>
+                  <Button type="button" label="Volver" className={`w-full  border-none text-white ${ForgotPassCSS.btnForgot}`} onClick={() => irALogin()}/>
               </div>
           </form>
       </div>

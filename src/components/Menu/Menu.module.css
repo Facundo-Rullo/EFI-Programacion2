@@ -1,0 +1,12 @@
+.hoverItemMenu:hover {
+    background-color: hsla(0, 0%, 100%, .05);
+}
+
+.hoverItemMenuActive {
+    background-color: hsla(0, 0%, 100%, .05);
+    border-left: 10px solid #8A2BE2;
+}
+
+.heightMenu {
+    height: calc(100vh - 170px);
+}
