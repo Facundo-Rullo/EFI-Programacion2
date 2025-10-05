@@ -8,7 +8,7 @@ import ItemDashboard from './Items/ItemDashboard'
 
 export default function Menu() {
   return (
-      <div className='flex flex-column p-4'>
+      <div className='flex flex-column pt-4 pl-4 pb-4 '>
         <div className="text-xl font-bold flex justify-content-center align-items-center">
           <Link to={'dashboard'}>
             <Image 
@@ -21,21 +21,7 @@ export default function Menu() {
 
         <Divider />
 
-        <div className={`text-white w-15rem overflow-y-auto ${MenuCSS.heightMenu}`}>
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
-          <ItemDashboard />
+        <div className={`text-white w-16rem pr-4 overflow-y-auto ${MenuCSS.heightMenu}`}>
           <ItemDashboard />
         </div>
       </div>

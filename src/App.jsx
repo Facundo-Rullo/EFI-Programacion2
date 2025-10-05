@@ -14,26 +14,30 @@ function App() {
   const nodeRef = useRef(null);
   return (
     <div className = "flex " >
-      <CSSTransition
-        in={menuVisible}
-        timeout={300}
-        classNames="slide-menu"
-        unmountOnExit
-        nodeRef={nodeRef}
-      >
-        <div ref={nodeRef}>
-          <Menu/>
-        </div>
-      </CSSTransition>
+        <CSSTransition
+          in={menuVisible}
+          timeout={300}
+          classNames="slide-menu"
+          mountOnEnter
+          unmountOnExit
+          nodeRef={nodeRef}
+        >
+          <div
+            ref={nodeRef}
+            className="fixed top-0 left-0 z-50 h-full"
+            style={{ width: "17.5rem" }}
+          >
+            <Menu />
+          </div>
+        </CSSTransition>
         
         <div 
-          className={`flex-1 content-area ${menuVisible ? "expanded" : "collapsed"}`}
-        >
+          className={`flex-1 content-area ${menuVisible ? "expanded" : "collapsed"}`}>
           <Header toggleMenu={() => setMenuVisible(prev => !prev)} />
-          <div className='px-4 pt-3'>
+          <div className='px-5 pt-3'>
             <BreadCrumbRoute />
           </div>
-          <div className=" p-4 h-screen overflow-auto">
+          <div className="h-screen p-5 overflow-auto">
             <Outlet />
           </div>
           <Footer />
