@@ -1,10 +1,9 @@
-import React , { useState } from "react";
+import React from "react";
 import { useNavigate } from 'react-router-dom';
 import Logo from '../../../assets/light/LogoRightText.png'
 import ForgotPassCSS from './ForgotPassword.module.css'
 import { Image } from 'primereact/image';
 import { InputText } from "primereact/inputtext";
-import { Checkbox } from "primereact/checkbox";
 import { Button } from 'primereact/button';
 
 function ForgotPassword() {
@@ -35,7 +34,7 @@ function ForgotPassword() {
               <div className="flex flex-column gap-2 w-full mb-4">
                       <label htmlFor="email">EMAIL</label>
                       <InputText type="email" id="email" aria-describedby="email-help" className="bg-transparent text-white" />
-                      <small id="username-help" style={{ color: "red" }} className="hidden">
+                      <small id="username-help" style={{ color: "var(--red_300)" }} className="hidden">
                           !!!!!!!!!!!!!!AGREGAR VALIDACIONNN!!!!!!!!!!!!!!!
                       </small>
               </div>

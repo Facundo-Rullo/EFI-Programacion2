@@ -78,7 +78,6 @@ export const ProductService = {
             inventoryStatus: 'INSTOCK',
             rating: 4
           },
-        // podés agregar más si querés
       ];
     },
   

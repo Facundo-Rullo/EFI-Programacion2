@@ -36,25 +36,35 @@ const Login = () => {
                 <div className="flex flex-column gap-2 w-full mb-4">
                         <label htmlFor="cuit">CUIT</label>
                         <InputText id="cuit" aria-describedby="cuit-help" className="bg-transparent text-white" />
-                        <small id="cuit-help" style={{ color: "red" }} className="hidden">
+                        <small id="cuit-help" style={{ color: "var(--red_300)" }} className="hidden">
                             !!!!!!!!!!!!!!AGREGAR VALIDACIONNN!!!!!!!!!!!!!!!
                         </small>
                 </div>
                 <div className="flex flex-column gap-2 w-full">
                         <label htmlFor="password">Contraseña</label>
                         <InputText type="password" id="password" aria-describedby="password-help" className="bg-transparent text-white"/>
-                        <small id="password-help" style={{ color: "red" }} className="hidden">
+                        <small id="password-help" style={{ color: "var(--red_300)" }} className="hidden">
                             !!!!!!!!!!!!!!AGREGAR VALIDACIONNN!!!!!!!!!!!!!!!
                         </small>
                 </div>
                 <div className="flex justify-content-between align-items-center gap-2 w-full mb-4 mt-4">
                     <div>
-                        <Checkbox inputId='checkLogin' onChange={e => setChecked(e.checked)} checked={checked} className={`${LoginCSS.che}`}></Checkbox>
+                        <Checkbox inputId='checkLogin' onChange={e => setChecked(e.checked)} checked={checked}></Checkbox>
                         <label htmlFor="checkLogin" className="ml-2" >Recordarme</label>
                     </div>
                     <a href="/recuperarContrasenia" className={`ml-2 ${LoginCSS.forgotPass}`}>¿Olvidaste tu contraseña?</a>
                 </div>
-                <Button type="submit" label="Iniciar Sesión" className={`w-full ${LoginCSS.btnLoginSesion} border-none text-white`} onClick={() => irADashboard()}/>
+                <Button 
+                    type="submit" 
+                    label="Iniciar Sesión" 
+                    className={`
+                        w-full 
+                        border-none 
+                        text-white
+                        ${LoginCSS.btnLoginSesion} 
+                    `} 
+                    onClick={() => irADashboard()}
+                />
             </form>
         </div>
     </div>

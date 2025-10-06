@@ -1,15 +1,11 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font_primary);
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(180deg, #404555, #0a061a);
-  /* background-color: #111827; */
-  /* background-color: #2d313e; */
-
-
+  color: var(--white_rgba-887);
+  background: linear-gradient(180deg, var(--gray_600), var(--black_850));
 }
 
 html, body {

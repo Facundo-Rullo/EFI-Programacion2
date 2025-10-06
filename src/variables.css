@@ -1,0 +1,31 @@
+:root {
+    /* Fuentes */
+    --font_primary: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    
+    /* Violet */
+    --violet_500: #8A2BE2;
+    --violet_700: #6A0DAD;
+    
+    /* Gray */
+    --gray_600: #404555;
+    --gray_200: rgba(133, 132, 132, 10%);
+    --gray_500: rgba(255, 255, 255, 0.05);
+
+    /* White */
+    --white_900: #FFFFFF;
+    --white_rgba-887: rgba(255, 255, 255, 0.87);
+    --white_100: hsla(0, 0%, 100%, .05);
+
+    /* Black */
+    --black_900: #000000;
+    --black_850: #0a061a;
+    --black_550: #252636;
+
+    /* Blue */
+    --blue_900: #1f2937;
+
+    /* Red */
+    --red_300: #dc3545;       
+    --red_100: #f87171; 
+    --red_700: #b02a37;  
+}

@@ -1,4 +1,3 @@
 .hoverNotification:hover {
-    background-color: rgba(133, 132, 132, 10%);
-    /* border-radius: 5px; */
+    background-color: var(--gray_200);
 }

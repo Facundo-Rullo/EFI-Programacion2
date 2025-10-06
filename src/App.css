@@ -1,3 +1,4 @@
+/* Transicion para ocultar el PanelMenu usa CSSTransition */
 .slide-menu-enter {
   transform: translateX(-100%);
   opacity: 0;
@@ -22,6 +23,7 @@
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+/*Transicion para mover el contenido, header y footer a la izquierda cuando se oculta el PanelMenu */
 .content-area {
   transition: margin-left 0.3s ease-in-out;
 }

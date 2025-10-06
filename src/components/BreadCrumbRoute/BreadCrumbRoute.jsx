@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 export default function BreadCrumbRoute() {
   const location = useLocation();
 
-  // 🔍 Partes de la URL
+  // Partes de la URL
   const pathSegments = location.pathname.split('/').filter(Boolean);
 
   // Generar ítems dinámicos

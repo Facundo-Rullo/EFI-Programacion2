@@ -66,9 +66,9 @@ function UserCustomizations() {
                 pt={{
                   button: (options) => ({
                     style: {
-                      backgroundColor: options.context?.selected ? '#8A2BE2' : '#1f2937',
-                      color: options.context?.selected ? '#fff' : 'rgba(255, 255, 255, 0.87)',
-                      border: options.context?.selected ? '1px solid #8A2BE2' : '1px solid #8A2BE2',
+                      backgroundColor: options.context?.selected ? 'var(--violet_500)' : 'var(--blue_900)',
+                      color: options.context?.selected ? 'var(--white_900)' : 'var(--white_rgba-887)',
+                      border: options.context?.selected ? '1px solid var(--violet_500)' : '1px solid var(--violet_500)',
                       outline: 'none',
                       boxShadow: 'none',
                     },
