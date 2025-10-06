@@ -37,7 +37,7 @@ function App() {
           <div className='px-5 pt-3'>
             <BreadCrumbRoute />
           </div>
-          <div className="h-screen p-5 overflow-auto">
+          <div className="p-5">
             <Outlet />
           </div>
           <Footer />
