@@ -3,7 +3,7 @@ import HeaderCSS from './Header.module.css'
 import { Button } from "primereact/button";
 import PopupUser from '../PopupUser/PopupUser'
 import UserCustomizations from '../UserCustomizations/UserCustomizations'
-import Notifications from '../Notifications/Notifications'
+import NotificationsHeader from '../NotificationsHeader/NotificationsHeader'
 
 
 export default function Header({ toggleMenu }) {
@@ -22,7 +22,7 @@ export default function Header({ toggleMenu }) {
       </div>
 
       <div className="flex gap-3 align-items-center">
-        <Notifications/>
+        <NotificationsHeader/>
         <UserCustomizations/>
         <PopupUser/>
       </div>

@@ -6,6 +6,7 @@
   color-scheme: light dark;
   color: var(--white_rgba-887);
   background: linear-gradient(180deg, var(--gray_600), var(--black_850));
+  background-repeat: no-repeat;
 }
 
 html, body {

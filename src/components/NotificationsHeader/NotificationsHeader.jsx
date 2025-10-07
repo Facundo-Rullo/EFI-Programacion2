@@ -1,11 +1,18 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import NotificationsCSS from './Notifications.module.css'
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Button } from 'primereact/button';
 import { Divider } from 'primereact/divider';
     
-export default function BasicDemo() {
+export default function NotificationsHeader() {
     const op = useRef(null);
+    const navigate = useNavigate()
+
+    const irAVisualizeAllNotifications = () => {
+        navigate('/visualizeAllnotifications')
+    }
+    
 
     return (
         <div className="card flex justify-content-center">
@@ -21,6 +28,7 @@ export default function BasicDemo() {
                 <Button
                     label="Ver todas las notificaciones"
                     className={`border-none text-white ${NotificationsCSS.colorBoton}`}
+                    onClick={() => irAVisualizeAllNotifications()}
                 />
             </OverlayPanel>
         </div>

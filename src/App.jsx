@@ -30,14 +30,14 @@ function App() {
             <Menu />
           </div>
         </CSSTransition>
-        
+      
         <div 
-          className={`flex-1 content-area ${menuVisible ? "expanded" : "collapsed"}`}>
+          className={`flex flex-column flex-1 min-h-screen content-area ${menuVisible ? "expanded" : "collapsed"}`}>
           <Header toggleMenu={() => setMenuVisible(prev => !prev)} />
           <div className='px-5 pt-3'>
             <BreadCrumbRoute />
           </div>
-          <div className="p-5">
+          <div className="p-5 min-h-screen" >
             <Outlet />
           </div>
           <Footer />

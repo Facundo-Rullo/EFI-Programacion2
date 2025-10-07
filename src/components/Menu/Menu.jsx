@@ -8,7 +8,7 @@ import ItemDashboard from './Items/ItemDashboard'
 
 export default function Menu() {
   return (
-      <div className='flex flex-column pt-4 pl-4 pb-4 '>
+      <div className='flex flex-column pt-4 pl-4 pb-4'>
         <div className="text-xl font-bold flex justify-content-center align-items-center">
           <Link to={'dashboard'}>
             <Image 

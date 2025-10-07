@@ -6,6 +6,7 @@ import ForgotPasswordStep2 from "../pages/Auth/ForgotPassword/ForgotPasswordStep
 import ForgotPasswordStep3 from "../pages/Auth/ForgotPassword/ForgotPasswordStep3/ForgotPasswordStep3";
 import ForgotPasswordStep4 from "../pages/Auth/ForgotPassword/ForgotPasswordStep4/ForgotPasswordStep4";
 import Dashboard from '../pages/Dashboard/Dashboard'
+import VisualizeAllNotifications from "../components/VisualizeAllNotifications/VisualizeAllNotifications";
 import Maquinaria from '../pages/Maquinaria/Maquinaria'
 
 const AppRoutes = ({ userLoggedIn }) => {
@@ -22,6 +23,7 @@ const AppRoutes = ({ userLoggedIn }) => {
 
       {/* Rutas protegidas con App */}
       <Route element={<App />}>
+        <Route path="/visualizeAllnotifications" element={<VisualizeAllNotifications />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/maquinaria" element={<Maquinaria />} />
       </Route>

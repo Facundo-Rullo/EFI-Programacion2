@@ -71,7 +71,7 @@ function NotificationDashboard() {
         <div className='flex justify-content-between align-items-center h-1rem mb-4'>
             <p className=''>Tienes 20 nuevas notificaciones</p>
             <Link 
-                to='/login'
+                to='/visualizeAllnotifications'
                 className='
                     text-white
                     no-underline
@@ -79,15 +79,17 @@ function NotificationDashboard() {
                 '
             >Ver todas</Link>
         </div>
-        {/* Agregar un boton de ver todas las notificaciones y agregar el scroll para terminar */}
         <div className={`flex gap-3 flex-column max-h-29rem overflow-x-auto pr-2`}>
             {notifications.map((n => (
-                <div className={`
+                <div 
+                    key={n.id}
+                    className={`
                         flex 
                         justify-content-between 
                         align-items-center 
                         p-2 
                         border-round-lg 
+                        cursor-pointer
                         ${NotificationCSS.hoverNotification}
                     `}>
                     <div className='flex gap-5 align-items-center'>
