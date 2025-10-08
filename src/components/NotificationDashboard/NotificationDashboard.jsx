@@ -81,23 +81,28 @@ function NotificationDashboard() {
         </div>
         <div className={`flex gap-3 flex-column max-h-29rem overflow-x-auto pr-2`}>
             {notifications.map((n => (
-                <div 
-                    key={n.id}
-                    className={`
-                        flex 
-                        justify-content-between 
-                        align-items-center 
-                        p-2 
-                        border-round-lg 
-                        cursor-pointer
-                        ${NotificationCSS.hoverNotification}
-                    `}>
-                    <div className='flex gap-5 align-items-center'>
-                        <Avatar icon={n.icon} size="large" shape="circle" />
-                        <span className='text-xl'>{n.msg}</span>
+                <Link
+                    to='/visualizeNotification'
+                    className='no-underline text-white'
+                >
+                    <div 
+                        key={n.id}
+                        className={`
+                            flex 
+                            justify-content-between 
+                            align-items-center 
+                            p-2 
+                            border-round-lg 
+                            cursor-pointer
+                            ${NotificationCSS.hoverNotification}
+                        `}>
+                        <div className='flex gap-5 align-items-center'>
+                            <Avatar icon={n.icon} size="large" shape="circle" />
+                            <span className='text-xl'>{n.msg}</span>
+                        </div>
+                        <span >{n.date}</span>
                     </div>
-                    <span >{n.date}</span>
-                </div>
+                </Link>
             )))}
         </div>
     </div>
