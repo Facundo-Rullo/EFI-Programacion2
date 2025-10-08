@@ -20,13 +20,13 @@ function VisualizeNotification() {
 
       <div className='flex flex-column gap-4'>
         <Card title={
-                <div className='flex align-items-center justify-content-between  '>
-                  <div className='flex align-items-center gap-3'>
+                <div className='flex flex-wrap align-items-center justify-content-between  '>
+                  <div className='flex flex-wrap align-items-center gap-3'>
                     <i className="pi pi-bell text-2xl line-height-3"></i>
                     <p className='m-0'>Titulo de la notificación</p>
                   </div>
                   <div className='flex align-items-center gap-3'>
-                    <p className='text-base'>07/10/2025 17:45</p>
+                    <p className='text-base mr-2'>07/10/2025 17:45</p>
                   </div>
                 </div>
               }
