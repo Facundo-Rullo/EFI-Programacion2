@@ -1,0 +1,7 @@
+.backgroundCard {
+    background-color: var(--violet_500);
+}
+
+.backgroundCardOptions:hover {
+    background-color: var(--gray_600);
+}
