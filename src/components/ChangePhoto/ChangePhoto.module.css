@@ -1,0 +1,11 @@
+.backgroundCard {
+    background-color: var(--gray_500);
+}
+
+.colorText {
+    color: var(--yellow_600);
+}
+.colorBtnUpload {
+    background: linear-gradient(180deg, var(--violet_500), var(--violet_700));
+}
+

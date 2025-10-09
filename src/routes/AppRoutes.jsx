@@ -8,6 +8,7 @@ import ForgotPasswordStep4 from "../pages/Auth/ForgotPassword/ForgotPasswordStep
 import Dashboard from '../pages/Dashboard/Dashboard'
 import VisualizeAllNotifications from "../components/VisualizeAllNotifications/VisualizeAllNotifications";
 import VisualizeNotification from "../components/VisualizeNotification/VisualizeNotification";
+import ChangePhoto from "../components/ChangePhoto/ChangePhoto";
 import Maquinaria from '../pages/Maquinaria/Maquinaria'
 
 const AppRoutes = ({ userLoggedIn }) => {
@@ -26,6 +27,7 @@ const AppRoutes = ({ userLoggedIn }) => {
       <Route element={<App />}>
         <Route path="/visualizeAllnotifications" element={<VisualizeAllNotifications />} />
         <Route path="/visualizenotification" element={<VisualizeNotification />} />
+        <Route path="/changePhoto" element={<ChangePhoto />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/maquinaria" element={<Maquinaria />} />
       </Route>

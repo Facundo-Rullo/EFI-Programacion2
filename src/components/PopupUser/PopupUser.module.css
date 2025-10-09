@@ -1,5 +1,5 @@
 .backgroundCard {
-    background-color: var(--violet_500);
+    background: linear-gradient(180deg, var(--violet_500), var(--violet_700));
 }
 
 .backgroundCardOptions:hover {

@@ -12,7 +12,7 @@ export default function PopupUser() {
         {
             label: 'Cambiar Foto',
             icon: 'pi pi-user',
-            path: '/dashboard'           
+            path: '/changePhoto'           
         },
         {
             label: 'Informacion',
