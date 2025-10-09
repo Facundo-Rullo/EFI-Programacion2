@@ -18,9 +18,11 @@ function VisualizeNotification() {
           onClick={() => irADashboard()}
       />
 
-      <div className='flex flex-column gap-4'>
-        <Card title={
-                <div className='flex flex-wrap align-items-center justify-content-between  '>
+      <div className='flex flex-column gap-4 '>
+        <Card 
+          className={`${NotificationsCSS.backgroundNoti}`}
+          title={
+                <div className='flex flex-wrap align-items-center justify-content-between '>
                   <div className='flex flex-wrap align-items-center gap-3'>
                     <i className="pi pi-bell text-2xl line-height-3"></i>
                     <p className='m-0'>Titulo de la notificación</p>

@@ -1,3 +1,7 @@
 .colorBoton {
     background-color: var(--violet_500);
-  }
+}
+
+.backgroundNoti {
+  background-color: var(--gray_500);
+}

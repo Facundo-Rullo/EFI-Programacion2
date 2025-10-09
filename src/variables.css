@@ -7,19 +7,19 @@
     --violet_700: #6A0DAD;
     
     /* Gray */
-    --gray_600: #404555;
     --gray_200: rgba(133, 132, 132, 10%);
     --gray_500: rgba(255, 255, 255, 0.05);
+    --gray_600: #404555;
 
     /* White */
-    --white_900: #FFFFFF;
-    --white_rgba-887: rgba(255, 255, 255, 0.87);
     --white_100: hsla(0, 0%, 100%, .05);
+    --white_rgba-887: rgba(255, 255, 255, 0.87);
+    --white_900: #FFFFFF;
 
     /* Black */
-    --black_900: #000000;
-    --black_850: #0a061a;
     --black_550: #252636;
+    --black_850: #0a061a;
+    --black_900: #000000;
 
     /* Blue */
     --blue_900: #1f2937;

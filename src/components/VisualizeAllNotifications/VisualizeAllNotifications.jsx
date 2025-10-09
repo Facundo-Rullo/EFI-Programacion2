@@ -51,6 +51,7 @@ function VisualizeAllNotifications() {
         {allNotifications.map((n) => (
           <Card 
             key={n.id}
+            className={`${NotificationsCSS.backgroundNoti}`}
             title={
               <div className='flex flex-wrap align-items-center justify-content-between  '>
                 <div className='flex flex-wrap align-items-center gap-3'>
