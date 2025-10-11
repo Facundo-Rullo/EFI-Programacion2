@@ -5,6 +5,7 @@ import ForgotPasswordStep1 from "../pages/Auth/ForgotPassword/ForgotPasswordStep
 import ForgotPasswordStep2 from "../pages/Auth/ForgotPassword/ForgotPasswordStep2/ForgotPasswordStep2";
 import ForgotPasswordStep3 from "../pages/Auth/ForgotPassword/ForgotPasswordStep3/ForgotPasswordStep3";
 import ForgotPasswordStep4 from "../pages/Auth/ForgotPassword/ForgotPasswordStep4/ForgotPasswordStep4";
+import ChangePassword from '../pages/Auth/ChangePassword/ChangePassword'
 import Dashboard from '../pages/Dashboard/Dashboard'
 import VisualizeAllNotifications from "../pages/VisualizeAllNotifications/VisualizeAllNotifications";
 import VisualizeNotification from "../pages/VisualizeNotification/VisualizeNotification";
@@ -28,6 +29,7 @@ const AppRoutes = ({ userLoggedIn }) => {
         <Route path="/visualizeAllnotifications" element={<VisualizeAllNotifications />} />
         <Route path="/visualizenotification" element={<VisualizeNotification />} />
         <Route path="/changePhoto" element={<ChangePhoto />} />
+        <Route path="/changePassword" element={<ChangePassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/maquinaria" element={<Maquinaria />} />
       </Route>

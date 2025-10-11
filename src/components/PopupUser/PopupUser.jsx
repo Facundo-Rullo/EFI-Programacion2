@@ -22,7 +22,7 @@ export default function PopupUser() {
         {
             label: 'Cambiar Contraseña',
             icon: 'pi pi-key',
-            path: '/dashboard'
+            path: '/changePassword'
         },
         {
             label: 'Cerrar Sesion',
