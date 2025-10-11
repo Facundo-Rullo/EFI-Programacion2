@@ -19,7 +19,7 @@ function ChangePhoto() {
                 <span>Usuario: </span>
                 <span>FRULLO</span>
             </div>
-            <div className='flex gap-3 text-lg font-semibold'>
+            <div className='flex flex-wrap gap-3 text-lg font-semibold'>
                 <span>Foto Actual:</span>
                 <Image 
                   src="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" 
