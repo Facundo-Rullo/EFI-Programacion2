@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import NotificationsCSS from './Notifications.module.css'
+import NotificationsCSS from './NotificationsIconHeader.module.css'
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Button } from 'primereact/button';
 import { Divider } from 'primereact/divider';

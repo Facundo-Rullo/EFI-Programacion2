@@ -6,9 +6,9 @@ import ForgotPasswordStep2 from "../pages/Auth/ForgotPassword/ForgotPasswordStep
 import ForgotPasswordStep3 from "../pages/Auth/ForgotPassword/ForgotPasswordStep3/ForgotPasswordStep3";
 import ForgotPasswordStep4 from "../pages/Auth/ForgotPassword/ForgotPasswordStep4/ForgotPasswordStep4";
 import Dashboard from '../pages/Dashboard/Dashboard'
-import VisualizeAllNotifications from "../components/VisualizeAllNotifications/VisualizeAllNotifications";
-import VisualizeNotification from "../components/VisualizeNotification/VisualizeNotification";
-import ChangePhoto from "../components/ChangePhoto/ChangePhoto";
+import VisualizeAllNotifications from "../pages/VisualizeAllNotifications/VisualizeAllNotifications";
+import VisualizeNotification from "../pages/VisualizeNotification/VisualizeNotification";
+import ChangePhoto from "../pages/ChangePhoto/ChangePhoto";
 import Maquinaria from '../pages/Maquinaria/Maquinaria'
 
 const AppRoutes = ({ userLoggedIn }) => {

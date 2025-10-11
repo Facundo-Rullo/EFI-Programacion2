@@ -3,7 +3,7 @@ import HeaderCSS from './Header.module.css'
 import { Button } from "primereact/button";
 import PopupUser from '../PopupUser/PopupUser'
 import UserCustomizations from '../UserCustomizations/UserCustomizations'
-import NotificationsHeader from '../NotificationsHeader/NotificationsHeader'
+import NotificationsHeader from '../NotificationsIconHeader/NotificationsIconHeader'
 
 
 export default function Header({ toggleMenu }) {
