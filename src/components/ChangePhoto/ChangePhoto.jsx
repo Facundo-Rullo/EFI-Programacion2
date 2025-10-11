@@ -21,7 +21,12 @@ function ChangePhoto() {
             </div>
             <div className='flex gap-3 text-lg font-semibold'>
                 <span>Foto Actual:</span>
-                <Image src="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" alt="foto" width="200" className='mt-2'/>
+                <Image 
+                  src="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" 
+                  alt="foto" 
+                  width="200" 
+                  className='mt-2'
+                />
             </div>
             <div className='mt-5'>
                 <FileUpload 
@@ -32,51 +37,32 @@ function ChangePhoto() {
                     uploadLabel="Subir"
                     chooseLabel="Elegir archivo"
                     cancelLabel="Cancelar"
+                    auto
                     emptyTemplate={<p className="m-0" >Arrastre y suelte archivos aquí para cargarlos.</p>} 
                     pt={{
-                        chooseButton: {
-                          style: {
-                            background: 'linear-gradient(180deg, #6A0DAD, #8A2BE2)',
-                            color: '#fff',
-                            border: 'none',
-                            padding: '0.75rem 1.5rem',
-                            borderRadius: '8px'
-                          }
-                        },
-                        uploadButton: {
-                          style: {
-                            background: 'linear-gradient(180deg, #4CAF50, #388E3C)',
-                            color: '#fff',
-                            border: 'none',
-                            padding: '0.75rem 1.5rem',
-                            borderRadius: '8px'
-                          }
-                        },
-                        cancelButton: {
-                          style: {
-                            background: 'linear-gradient(180deg, #E53935, #B71C1C)',
-                            color: '#fff',
-                            border: 'none',
-                            padding: '0.75rem 1.5rem',
-                            borderRadius: '8px'
-                          }
-                        }
-                    }
-                 }
+                        chooseButton: {className: `text-white border-none ${ChangePhotoCSS.colorBtnUpload}`},
+                    }}
                 />
             </div>
             <p className={`${ChangePhotoCSS.colorText} text-lg`}>
                 <i className='pi pi-exclamation-triangle mr-2'></i> 
                 Para obtener la mejor calidad, recomendamos subir una imagen de 300x300 píxeles como foto de perfil.
             </p>
-            <Button 
-                label="Cancelar" 
-                className={`border-none text-white ${ChangePhotoCSS.colorBtnUpload}`} 
-                onClick={() => irADashboard()}
-            />
+            <div className='flex gap-3'>
+              <Button 
+                  label="Cambiar Foto" 
+                  className={`border-none text-white ${ChangePhotoCSS.colorBtnUpload}`} 
+              />
+              <Button 
+                  label="Cancelar" 
+                  className={`border-none text-white ${ChangePhotoCSS.colorBtnUpload}`} 
+                  onClick={() => irADashboard()}
+              />
+            </div>
         </Card>
     </div>
   )
 }
 
 export default ChangePhoto
+
