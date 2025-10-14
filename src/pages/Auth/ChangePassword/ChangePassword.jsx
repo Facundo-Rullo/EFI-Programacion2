@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-import ChangePassCSS from './ChangePassword.module.css'
 import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password'
@@ -66,8 +65,27 @@ function ChangePassword() {
               />
           </div>
           <div className='flex gap-3 mt-3 '>
-            <Button type='submit' label="Confirmar" className='bg__buttons text-white border-none outline__color--buttons' onClick={show}/>
-            <Button type='button' label="Cancelar" className='bg__buttons text-white border-none outline__color--buttons' />
+            <Button 
+              type='submit' 
+              label="Confirmar" 
+              className='
+                bg__buttons 
+                text-white 
+                border-none 
+                outline__color--buttons
+              ' 
+              onClick={show}
+            />
+            <Button 
+              type='button' 
+              label="Cancelar" 
+              className='
+                bg__buttons 
+                text-white 
+                border-none 
+                outline__color--buttons
+              ' 
+            />
           </div>
         </form>
       </Card>

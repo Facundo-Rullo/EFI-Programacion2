@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import NotificationsCSS from './VisualizeAllNotifications.module.css'
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
+import { Toast } from 'primereact/toast';
 
 function VisualizeAllNotifications() {
+  const toast = useRef(null);
+
+  const viewAllNotifications = e => {
+    e.preventDefault();
+    toast.current.show({ severity: 'success', summary: 'Notificaciones', detail: 'Marcado como leido todas las notificaciones'});
+  };
+
+  const viewNotifications = e => {
+    e.preventDefault();
+    toast.current.show({ severity: 'success', summary: 'Notificaciones', detail: 'Marcado como leido'});
+  };
+
   const allNotifications = [
     {
       id: 1,
@@ -41,10 +54,12 @@ function VisualizeAllNotifications() {
   ]
 
   return (
-    <div className=''>
+    <div>
+      <Toast ref={toast} />
       <Button
           label="Marcar todo como leido"
           className={`border-none text-white mb-5 ${NotificationsCSS.colorBoton}`}
+          onClick={viewAllNotifications}
       />
 
       <div className='flex flex-column gap-4'>
@@ -66,8 +81,9 @@ function VisualizeAllNotifications() {
                       style={{ fontSize: "1.5rem" }} />
                     }
                     className={`bg-transparent text-white border-none  `} 
-                    tooltip={n.tooltipLeido} //cambiar esto despue susar operador ternario
+                    tooltip={n.tooltipLeido} //cambiar esto despue usar operador ternario
                     tooltipOptions={{ position: "left" }}
+                    onClick={viewNotifications}
                   />
                 </div>
               </div>

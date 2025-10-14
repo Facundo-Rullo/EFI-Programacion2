@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ChangePhotoCSS from './ChangePhoto.module.css'
 import { useNavigate } from 'react-router-dom';
 import { Image } from 'primereact/image';
 import { FileUpload } from 'primereact/fileupload';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
+import { Toast } from 'primereact/toast';
 
 function ChangePhoto() {
     const navigate = useNavigate()
     const irADashboard = () => {
         navigate('/dashboard')
     }
+
+    const toast = useRef(null);
+
+    const show = e => {
+        e.preventDefault();
+        toast.current.show({ severity: 'success', summary: 'Foto actualizada con exito'});
+    };
+
   return (
     <div >
-        
+        <Toast ref={toast} />
         <Card title="Cambiar Foto" className={`p-4 ${ChangePhotoCSS.backgroundCard}`}>
             <div className='flex gap-2 text-lg font-semibold mb-3'>
                 <span>Usuario: </span>
@@ -52,6 +61,7 @@ function ChangePhoto() {
               <Button 
                   label="Cambiar Foto" 
                   className={`border-none text-white ${ChangePhotoCSS.colorBtnUpload}`} 
+                  onClick={show}
               />
               <Button 
                   label="Cancelar" 
