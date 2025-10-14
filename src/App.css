@@ -35,3 +35,29 @@
 .content-area.collapsed {
   margin-left: 0;
 }
+
+/* Clases Generales*/
+.bg__card { /*Fondo de las tarjetas "Card"*/
+  background-color: var(--gray_500);
+}
+
+.bg__buttons { /*Fondo de los botones*/
+  background: linear-gradient(90deg, var(--violet_500), var(--violet_700));
+}
+
+/*Outline, borders y shadows de los inputs y botones*/
+.outline__color--inputs:focus, .outline__color--buttons:focus {
+  border-color: var(--violet_500);
+
+  outline: 2px solid rgba(137, 43, 226, 0.3);
+
+  outline-offset: 2px; 
+
+  box-shadow: none !important;
+}
+
+/*Borders de los inputs y botones*/
+.outline__color--inputs:hover, .outline__color--buttons:hover {
+  border-color: var(--violet_500);
+}
+

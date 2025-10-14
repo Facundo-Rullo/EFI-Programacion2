@@ -1,9 +1,76 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
+import ChangePassCSS from './ChangePassword.module.css'
+import { Card } from 'primereact/card';
+import { InputText } from 'primereact/inputtext';
+import { Password } from 'primereact/password'
+import { Button } from 'primereact/button';
+import { Toast } from 'primereact/toast';
 
 function ChangePassword() {
+  const [cuit, setCuit] = useState('99-99999999-9');
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmNewPassword, setConfirmNewPassword] = useState('');
+
+  const toast = useRef(null);
+
+  const show = e => {
+    e.preventDefault();
+    toast.current.show({ severity: 'success', summary: 'Contraseña actualizada con exito'});
+  };
+
   return (
     <div>
-      
+      <Toast ref={toast} />
+      <Card title="Cambia la contraseña" className={`w-30rem bg__card`}>
+        <form className='flex flex-column gap-3'>
+          <div className="flex flex-column gap-2 w-full">
+              <label htmlFor="username">Cuit</label>
+              <InputText 
+                id="username" 
+                value={cuit} 
+                onChange={(e) => setCuit(e.target.value)}
+                readOnly  
+                className={`bg-transparent outline__color--inputs`}
+              />
+          </div>
+          <div className="flex flex-column gap-2">
+              <label htmlFor="username">Contraseña Actual</label>
+              <Password 
+                value={currentPassword} 
+                onChange={(e) => setCurrentPassword(e.target.value)} 
+                toggleMask 
+                className="static block"
+                inputClassName={`bg-transparent text-white w-full outline__color--inputs`}
+                feedback={false}
+              />
+          </div>
+          <div className="flex flex-column gap-2">
+              <label htmlFor="username">Nueva Contraseña</label>
+              <Password 
+                value={newPassword} 
+                onChange={(e) => setNewPassword(e.target.value)} 
+                toggleMask 
+                className="static block"
+                inputClassName={`bg-transparent text-white w-full outline__color--inputs`}
+              />
+          </div>
+          <div className="flex flex-column gap-2">
+              <label htmlFor="username">Comfirmar Contraseña</label>
+              <Password 
+                value={confirmNewPassword} 
+                onChange={(e) => setConfirmNewPassword(e.target.value)} 
+                toggleMask 
+                className="static block"
+                inputClassName={`bg-transparent text-white w-full outline__color--inputs`}
+              />
+          </div>
+          <div className='flex gap-3 mt-3 '>
+            <Button type='submit' label="Confirmar" className='bg__buttons text-white border-none outline__color--buttons' onClick={show}/>
+            <Button type='button' label="Cancelar" className='bg__buttons text-white border-none outline__color--buttons' />
+          </div>
+        </form>
+      </Card>
     </div>
   )
 }
