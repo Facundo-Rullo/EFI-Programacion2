@@ -36,7 +36,7 @@ export default function InfoUser() {
                 visible={visible}
                setVisible={setVisible}
             />
-            <section className='flex flex-wrap justify-content-between aling-items-center mx-4'>
+            <section className='flex flex-wrap justify-content-between aling-items-center mx-4 gap-5'>
                 <div>
                     <div>
                         <h4 className='text-2xl mb-1'>Nombres</h4>
