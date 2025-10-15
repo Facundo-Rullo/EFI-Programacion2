@@ -11,6 +11,7 @@ import VisualizeAllNotifications from "../pages/VisualizeAllNotifications/Visual
 import VisualizeNotification from "../pages/VisualizeNotification/VisualizeNotification";
 import ChangePhoto from "../pages/ChangePhoto/ChangePhoto";
 import Maquinaria from '../pages/Maquinaria/Maquinaria'
+import InfoUser from "../pages/InfoUser/InfoUser";
 
 const AppRoutes = ({ userLoggedIn }) => {
   return (
@@ -30,6 +31,7 @@ const AppRoutes = ({ userLoggedIn }) => {
         <Route path="/visualizenotification" element={<VisualizeNotification />} />
         <Route path="/changePhoto" element={<ChangePhoto />} />
         <Route path="/changePassword" element={<ChangePassword />} />
+        <Route path="/infoUser" element={<InfoUser />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/maquinaria" element={<Maquinaria />} />
       </Route>

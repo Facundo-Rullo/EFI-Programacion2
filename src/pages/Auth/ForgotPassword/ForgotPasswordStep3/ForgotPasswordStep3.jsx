@@ -18,7 +18,7 @@ function ForgotPasswordStep3() {
       navigate('/recuperarContraseniaPaso4'); 
     };
 
-    const [inputEmail, setInputEmail] = useState('ejemplo@ejemplo.com');
+    const [inputEmail, setInputEmail] = useState('frullo@trigolimpio.com');
     const [inputPassword, setInputPassword] = useState('');
     const [inputConfirmPassword, setInputConfirmPassword] = useState('');
     return (

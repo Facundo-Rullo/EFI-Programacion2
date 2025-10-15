@@ -17,7 +17,7 @@ export default function PopupUser() {
         {
             label: 'Informacion',
             icon: 'pi pi-id-card',
-            path: '/dashboard'
+            path: '/infoUser'
         },
         {
             label: 'Cambiar Contraseña',

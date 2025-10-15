@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password'
@@ -6,6 +7,11 @@ import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 
 function ChangePassword() {
+  const navigate = useNavigate()
+  const irADashboard = () => {
+    navigate('/dashboard')
+  }
+
   const [cuit, setCuit] = useState('99-99999999-9');
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -85,6 +91,7 @@ function ChangePassword() {
                 border-none 
                 outline__color--buttons
               ' 
+              onClick={() => irADashboard()}
             />
           </div>
         </form>
