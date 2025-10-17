@@ -4,7 +4,7 @@ import MenuCSS from '../Menu.module.css'
 import { PanelMenu } from 'primereact/panelmenu';
 import { Link } from 'react-router-dom';
 
-export default function ItemDashboard() {
+export default function ItemMachinery() {
   
   const itemSimple = (item) => {
     const location = useLocation();
@@ -38,16 +38,16 @@ export default function ItemDashboard() {
     
   const items = [
     {
-        label: 'Dashboard',
-        icon: 'pi pi-chart-bar',
+        label: 'Maquinaria',
+        icon: 'pi pi-warehouse',
         template: itemSimple,
-        path: '/dashboard',
+        path: '/machinery',
     },
 ];
 
   return (
     <div className="card flex flex-column justify-content-center">
-        <p className='pl-3'>Dashboard</p>
+        <p className='pl-3'>Maquinaria</p>
         <div 
         className={`
             border-round-md 

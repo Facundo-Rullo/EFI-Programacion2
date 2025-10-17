@@ -10,7 +10,7 @@ import Dashboard from '../pages/Dashboard/Dashboard'
 import VisualizeAllNotifications from "../pages/VisualizeAllNotifications/VisualizeAllNotifications";
 import VisualizeNotification from "../pages/VisualizeNotification/VisualizeNotification";
 import ChangePhoto from "../pages/ChangePhoto/ChangePhoto";
-import Maquinaria from '../pages/Maquinaria/Maquinaria'
+import Machinery from '../pages/Machinery/Machinery'
 import InfoUser from "../pages/InfoUser/InfoUser";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 
@@ -34,7 +34,7 @@ const AppRoutes = ({ userLoggedIn }) => {
         <Route path="/changePassword" element={<ChangePassword />} />
         <Route path="/infoUser" element={<InfoUser />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/maquinaria" element={<Maquinaria />} />
+        <Route path="/machinery" element={<Machinery />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />

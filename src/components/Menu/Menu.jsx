@@ -5,6 +5,7 @@ import { Image } from 'primereact/image';
 import { Link } from 'react-router-dom';
 import { Divider } from 'primereact/divider';
 import ItemDashboard from './Items/ItemDashboard'
+import ItemMachinery from './Items/ItemMachinery';
 
 export default function Menu() {
   return (
@@ -21,8 +22,9 @@ export default function Menu() {
 
         <Divider />
 
-        <div className={`text-white w-16rem pr-4 overflow-y-auto ${MenuCSS.heightMenu}`}>
+        <div className={`flex flex-column gap-5 text-white w-16rem pr-4 overflow-y-auto ${MenuCSS.heightMenu}`}>
           <ItemDashboard />
+          <ItemMachinery />
         </div>
       </div>
   );
