@@ -4,7 +4,7 @@ import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext'; 
 
-export default function AddMachinery(props) {
+export default function AddData(props) {
     //Sirve para reiniciar los campos del input cuando se cierra el modal
     useEffect(() => {
         if (!props.visible) {
