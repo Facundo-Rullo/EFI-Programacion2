@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Toolbar } from 'primereact/toolbar';
@@ -11,13 +11,6 @@ import { InputText } from 'primereact/inputtext';
 
 // 👇 1. Recibimos un único objeto 'props'.
 export default function Grilla(props) {
-    const [maquinas, setMaquinas] = useState([]);
-
-    useEffect(() => {
-        // Simulamos la carga de datos desde una api pero los cargamos desde el js
-        setMaquinas(props.mockMaquinaria); //prop
-    }, []);
-    
     const [selectExport, setSelectExport] = useState(null);
     const exports = [
         { name: 'PDF', code: 'PDF' },
@@ -63,12 +56,13 @@ export default function Grilla(props) {
             <Toolbar className="mb-4 bg-transparent border-none pt-0" start={leftButtonAdd} end={endFilter}></Toolbar>
             
             <DataTable 
-                value={maquinas} 
+                value={props.data} 
                 dataKey="id" 
                 paginator 
                 rows={10} 
                 rowClassName={'bg-transparent'} 
                 paginatorClassName='bg-transparent border-none mt-4'
+                emptyMessage="No hay datos cargados."
             >
                {props.configColumnsGrilla.map((col) => (
                     <Column 

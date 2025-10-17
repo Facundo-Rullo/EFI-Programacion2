@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AddData from '../../components/AddData/AddData';
 import ViewMaintenance from '../Maintenance/views/ViewMaintenance';
 import Grilla from '../../components/Grilla/Grilla';
@@ -13,6 +13,13 @@ export default function GestionMaquinaria() {
     const [maquinaSeleccionada, setMaquinaSeleccionada] = useState(null);
     const [historialVisible, setHistorialVisible] = useState(false);
     const [visible, setVisible] = useState(false);
+
+    const [maquinas, setMaquinas] = useState([]);
+    useEffect(() => {
+        // Simulamos la carga de datos desde una api pero los cargamos desde el js
+        setMaquinas(mockMaquinaria); 
+    }, []);
+    
 
     const addMachinaryDialog = () => {
         setVisible(true);
@@ -86,6 +93,7 @@ export default function GestionMaquinaria() {
                 addMachinaryDialog={addMachinaryDialog}
                 configColumnsGrilla={configColumnsGrilla}
                 btnTitle={'Nueva Maquinaria'}
+                data={maquinas}
             />
             <ViewMaintenance
                 visible={historialVisible}
