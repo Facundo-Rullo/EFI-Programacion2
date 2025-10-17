@@ -11,6 +11,7 @@ import VisualizeAllNotifications from "../pages/VisualizeAllNotifications/Visual
 import VisualizeNotification from "../pages/VisualizeNotification/VisualizeNotification";
 import ChangePhoto from "../pages/ChangePhoto/ChangePhoto";
 import Machinery from '../pages/Machinery/Machinery'
+import Maintenance from "../pages/Maintenance/Maintenance";
 import InfoUser from "../pages/InfoUser/InfoUser";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 
@@ -35,6 +36,7 @@ const AppRoutes = ({ userLoggedIn }) => {
         <Route path="/infoUser" element={<InfoUser />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/machinery" element={<Machinery />} />
+        <Route path="/maintenance" element={<Maintenance />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />
