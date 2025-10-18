@@ -8,6 +8,9 @@ import ItemDashboard from './Items/ItemDashboard'
 import ItemMachinery from './Items/ItemMachinery';
 import ItemMaintenance from './Items/ItemMaintenance';
 import ItemEmployees from './Items/ItemEmployees';
+import ItemInsumos from './Items/ItemInsumos';
+import ItemUsers from './Items/ItemUsers';
+import ItemRoles from './Items/ItemRoles';
 
 export default function Menu() {
   return (
@@ -32,6 +35,13 @@ export default function Menu() {
           </div>
           <div className='mt-4'>
             <ItemEmployees/>
+          </div>
+          <div className='mt-4'>
+            <ItemInsumos/>
+          </div>
+          <div className='mt-4'>
+            <ItemUsers/>
+            <ItemRoles/>
           </div>
         </div>
       </div>

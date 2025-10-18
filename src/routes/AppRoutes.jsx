@@ -15,6 +15,9 @@ import Maintenance from "../pages/Maintenance/Maintenance";
 import Employees from '../pages/Employees/Employees'
 import InfoUser from "../pages/InfoUser/InfoUser";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import Stock from "../pages/Stock/Stock";
+import Users from "../pages/Security/Users/Users";
+import Roles from "../pages/Security/Roles/Roles";
 
 const AppRoutes = ({ userLoggedIn }) => {
   return (
@@ -39,6 +42,9 @@ const AppRoutes = ({ userLoggedIn }) => {
         <Route path="/machinery" element={<Machinery />} />
         <Route path="/maintenance" element={<Maintenance />} />
         <Route path="/employees" element={<Employees />} />
+        <Route path="/stock" element={<Stock />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/roles" element={<Roles />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />
