@@ -7,6 +7,7 @@ import { Divider } from 'primereact/divider';
 import ItemDashboard from './Items/ItemDashboard'
 import ItemMachinery from './Items/ItemMachinery';
 import ItemMaintenance from './Items/ItemMaintenance';
+import ItemEmployees from './Items/ItemEmployees';
 
 export default function Menu() {
   return (
@@ -25,9 +26,12 @@ export default function Menu() {
 
         <div className={`flex flex-column text-white w-16rem pr-4 overflow-y-auto ${MenuCSS.heightMenu}`}>
           <ItemDashboard />
-          <div className='flex flex-column gap-2 mt-5'>
+          <div className='flex flex-column gap-2 mt-4'>
             <ItemMachinery /> 
             <ItemMaintenance /> 
+          </div>
+          <div className='mt-4'>
+            <ItemEmployees/>
           </div>
         </div>
       </div>

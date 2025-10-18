@@ -75,3 +75,60 @@ export const mockMaquinaria = [
     { id: 420, maquinariaId: 3, fecha: '2025-09-30T00:00:00Z', tipo: 'Preventivo', descripcion: 'Actualización de software del monitor de siembra.', responsable: 'Servicio Técnico', costo: 20000 }
     
   ];
+
+  export const mockEmpleados = [
+    {
+      id: 101,
+      legajo: "2301",
+      nombre: "Juan Carlos",
+      apellido: "Perez",
+      dni: "30.123.456",
+      cuil: "20-30123456-5",
+      fechaNacimiento: "1983-05-15T00:00:00Z",
+      domicilio: "Av. San Martín 123, Arias",
+      telefono: "+54 9 3468 12-3456",
+      email: "jcperez@trigolimpio.com",
+      puesto: "Operario de Cosechadora",
+      area: "Campo",
+      fechaIngreso: "2015-03-01T00:00:00Z",
+      tipoContrato: "Permanente",
+      estado: "Activo",
+      fotoUrl: "https://i.pravatar.cc/150?u=101"
+    },
+    {
+      id: 102,
+      legajo: "2302",
+      nombre: "Ana María",
+      apellido: "Gomez",
+      dni: "35.789.012",
+      cuil: "27-35789012-8",
+      fechaNacimiento: "1990-11-22T00:00:00Z",
+      domicilio: "Belgrano 450, Arias",
+      telefono: "+54 9 3468 23-4567",
+      email: "agomez@trigolimpio.com",
+      puesto: "Administrativa Contable",
+      area: "Administración",
+      fechaIngreso: "2018-07-20T00:00:00Z",
+      tipoContrato: "Permanente",
+      estado: "Activo",
+      fotoUrl: "https://i.pravatar.cc/150?u=102"
+    },
+    {
+      id: 103,
+      legajo: "2303",
+      nombre: "Ricardo Luis",
+      apellido: "Juarez",
+      dni: "28.456.789",
+      cuil: "20-28456789-3",
+      fechaNacimiento: "1980-01-30T00:00:00Z",
+      domicilio: "Rivadavia 789, Arias",
+      telefono: "+54 9 3468 34-5678",
+      email: "rjuarez@trigolimpio.com",
+      puesto: "Jefe de Taller",
+      area: "Taller",
+      fechaIngreso: "2012-01-10T00:00:00Z",
+      tipoContrato: "Permanente",
+      estado: "Inactivo",
+      fotoUrl: "https://i.pravatar.cc/150?u=103"
+    }
+  ];

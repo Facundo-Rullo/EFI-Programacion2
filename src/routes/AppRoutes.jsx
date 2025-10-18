@@ -12,6 +12,7 @@ import VisualizeNotification from "../pages/VisualizeNotification/VisualizeNotif
 import ChangePhoto from "../pages/ChangePhoto/ChangePhoto";
 import Machinery from '../pages/Machinery/Machinery'
 import Maintenance from "../pages/Maintenance/Maintenance";
+import Employees from '../pages/Employees/Employees'
 import InfoUser from "../pages/InfoUser/InfoUser";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 
@@ -37,6 +38,7 @@ const AppRoutes = ({ userLoggedIn }) => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/machinery" element={<Machinery />} />
         <Route path="/maintenance" element={<Maintenance />} />
+        <Route path="/employees" element={<Employees />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />
