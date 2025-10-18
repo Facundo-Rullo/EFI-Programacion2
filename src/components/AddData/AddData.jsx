@@ -3,6 +3,9 @@ import { FileUpload } from 'primereact/fileupload';
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext'; 
+import { Calendar } from 'primereact/calendar';
+import { Editor } from 'primereact/editor';
+import { InputTextarea } from 'primereact/inputtextarea';
 
 export default function AddData(props) {
     //Sirve para reiniciar los campos del input cuando se cierra el modal
@@ -13,6 +16,9 @@ export default function AddData(props) {
     }, [props.visible]);
 
     const [formData, setFormData] = useState({});
+    const [date, setDate] = useState(null);
+    const [text, setText] = useState('');
+    const [textArea, setTextArea] = useState('');
 
     //controlo el estado del input con el form data porque solo uso un State
     const InputChange = (e) => {
@@ -33,7 +39,7 @@ export default function AddData(props) {
                 style={{borderColor: 'var(--violet_500)'}}
             />
             <Button 
-                label="Actualizar" 
+                label="Agregar" 
                 icon="pi pi-check" 
                 onClick={() => props.setVisible(false)} 
                 className='outline__color--buttons bg__buttons border-none text-white' />
@@ -49,6 +55,7 @@ export default function AddData(props) {
             style={{ width: '50vw'}} 
             onHide={() => {if (!props.visible) return; props.setVisible(false);}} 
             footer={footerContent}
+            className='bg__card'
         >
             <section className='flex flex-column gap-3'>
                 {props.configInputsMachinary.map((inputConfig) => {
@@ -87,6 +94,43 @@ export default function AddData(props) {
                                     />
                                 </div>
                             );
+                        
+                        case 'date':
+                            return(
+                                <div className="flex flex-column gap-2">
+                                    <label htmlFor="home">{inputConfig.label}</label>
+                                    <Calendar 
+                                        value={date} 
+                                        onChange={(e) => setDate(e.value)} 
+                                        inputClassName='outline__color--inputs bg-transparent'
+                                    />
+                                </div>
+                            );
+                        
+                        case 'description': 
+                            return (
+                                <div className="card">
+                                    <Editor 
+                                        value={text} 
+                                        onTextChange={(e) => setText(e.htmlValue)} 
+                                        style={{ height: '320px' }}
+                                    />
+                                </div>
+                            )
+                        
+                        case 'textarea':
+                            return (
+                                <div className="flex flex-column gap-2">
+                                    <label htmlFor="home">{inputConfig.label}</label>
+                                    <InputTextarea 
+                                        value={textArea} 
+                                        onChange={(e) => setTextArea(e.target.value)} 
+                                        rows={5} 
+                                        cols={30} 
+                                        className='bg-transparent outline__color--inputs'    
+                                    />
+                                </div>
+                            )
 
                         default:
                             return null;

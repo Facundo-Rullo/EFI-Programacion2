@@ -88,9 +88,13 @@ export default function GestionMaquinaria() {
     return (
         <Card className="bg__card">
             
+            <AddData 
+                visible={visible} 
+                setVisible={setVisible}
+                configInputsMachinary={configInputsMachinary}
+            />
             <Grilla
-                mockMaquinaria={mockMaquinaria}
-                addMachinaryDialog={addMachinaryDialog}
+                addDialog={addMachinaryDialog}
                 configColumnsGrilla={configColumnsGrilla}
                 btnTitle={'Nueva Maquinaria'}
                 data={maquinas}
@@ -100,11 +104,6 @@ export default function GestionMaquinaria() {
                 onHide={() => setHistorialVisible(false)}
                 maquina={maquinaSeleccionada}
                 mantenimientos={mockMantenimientos}
-            />
-            <AddData 
-                visible={visible} 
-                setVisible={setVisible}
-                configInputsMachinary={configInputsMachinary}
             />
             
         </Card>

@@ -21,7 +21,7 @@ export default function Grilla(props) {
     const leftButtonAdd = () => {
         return (
             <div className='flex gap-3'>
-                <Button label={props.btnTitle} icon="pi pi-plus" className="bg__buttons border-none text-white outline__color--buttons" onClick={() => props.addMachinaryDialog()}/>
+                <Button label={props.btnTitle} icon="pi pi-plus" className="bg__buttons border-none text-white outline__color--buttons" onClick={() => props.addDialog()}/>
                 <Dropdown 
                     value={selectExport} 
                     onChange={(e) => setSelectExport(e.value)} 
@@ -45,7 +45,7 @@ export default function Grilla(props) {
         <div>
           <IconField iconPosition="left">
               <InputIcon className="pi pi-search"> </InputIcon>
-              <InputText placeholder="Search"  className='bg-transparent outline__color--inputs'/>
+              <InputText placeholder="Buscar"  className='bg-transparent outline__color--inputs'/>
           </IconField>
         </div>
       )
