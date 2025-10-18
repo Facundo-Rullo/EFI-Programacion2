@@ -20,7 +20,7 @@ export default function Grilla(props) {
     // Contenido del Toolbar (botón para agregar)
     const leftButtonAdd = () => {
         return (
-            <div className='flex gap-3'>
+            <div className='flex flex-wrap gap-3'>
                 <Button label={props.btnTitle} icon="pi pi-plus" className="bg__buttons border-none text-white outline__color--buttons" onClick={() => props.addDialog()}/>
                 <Dropdown 
                     value={selectExport} 
@@ -28,7 +28,15 @@ export default function Grilla(props) {
                     options={exports} 
                     optionLabel="name" 
                     placeholder="Exportar" 
-                    className="w-full md:w-14rem bg__buttons font-medium border-none text-white outline__color--buttons" 
+                    className="
+                        w-full 
+                        md:w-14rem 
+                        bg__buttons 
+                        font-medium 
+                        border-none 
+                        text-white 
+                        outline__color--buttons
+                    " 
                     pt={{
                         input: {
                             // Usá una clase de color para el texto, por ejemplo 'text-gray-400'
@@ -52,9 +60,8 @@ export default function Grilla(props) {
     };
 
     return (
-        <div>
+        <div className='w-full overflow-x-auto'>
             <Toolbar className="mb-4 bg-transparent border-none pt-0" start={leftButtonAdd} end={endFilter}></Toolbar>
-            
             <DataTable 
                 value={props.data} 
                 dataKey="id" 
@@ -64,7 +71,7 @@ export default function Grilla(props) {
                 paginatorClassName='bg-transparent border-none mt-4'
                 emptyMessage="No hay datos cargados."
             >
-               {props.configColumnsGrilla.map((col) => (
+                {props.configColumnsGrilla.map((col) => (
                     <Column 
                         key={col.key}
                         headerClassName='bg-transparent'

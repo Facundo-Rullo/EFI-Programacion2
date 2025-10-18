@@ -12,7 +12,6 @@ import { mockMaquinaria, mockMantenimientos } from '../../Data/mockData';
 export default function GestionMaquinaria() {
     const [maquinaSeleccionada, setMaquinaSeleccionada] = useState(null);
     const [historialVisible, setHistorialVisible] = useState(false);
-    const [visible, setVisible] = useState(false);
 
     const [maquinas, setMaquinas] = useState([]);
     useEffect(() => {
@@ -20,12 +19,12 @@ export default function GestionMaquinaria() {
         setMaquinas(mockMaquinaria); 
     }, []);
     
-
+    const [visible, setVisible] = useState(false);
     const addMachinaryDialog = () => {
         setVisible(true);
     };
     
-    const configInputsMachinary = [
+    const configInputs = [
         { id: 'username', name: 'nombre', label: 'Nombre', type: 'text'},
         { id: 'type', name: 'Tipo', label: 'Tipo', type: 'text'},
         { id: 'marca', name: 'Marca', label: 'Marca', type: 'text'},
@@ -91,7 +90,7 @@ export default function GestionMaquinaria() {
             <AddData 
                 visible={visible} 
                 setVisible={setVisible}
-                configInputsMachinary={configInputsMachinary}
+                configInputs={configInputs}
             />
             <Grilla
                 addDialog={addMachinaryDialog}

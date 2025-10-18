@@ -19,12 +19,12 @@ export default function Maintenance() {
         setVisible(true);
     };
     
-    const configInputsMachinary = [
+    const configInputs = [
         { id: 'fecha', name: 'Fecha', label: 'Fecha', type: 'date'},
         { id: 'type', name: 'Tipo', label: 'Tipo', type: 'text'},
         { id: 'description', name: 'Description', label: 'Descripcion', type: 'textarea'},
         { id: 'responsable', name: 'Responsable', label: 'Responsable', type: 'text'},
-        { id: 'costo', name: 'Costo', label: 'Costo', type: 'text'},
+        { id: 'costo', name: 'Costo', label: 'Costo', type: 'number'},
     ];
 
     // Template para la columna de acciones
@@ -53,7 +53,7 @@ export default function Maintenance() {
             <AddData 
                 visible={visible} 
                 setVisible={setVisible}
-                configInputsMachinary={configInputsMachinary}
+                configInputs={configInputs}
             />
             <Grilla
                 addDialog={addMintenanceDialog}

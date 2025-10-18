@@ -6,6 +6,7 @@ import { InputText } from 'primereact/inputtext';
 import { Calendar } from 'primereact/calendar';
 import { Editor } from 'primereact/editor';
 import { InputTextarea } from 'primereact/inputtextarea';
+import { InputNumber } from 'primereact/inputnumber';
 
 export default function AddData(props) {
     //Sirve para reiniciar los campos del input cuando se cierra el modal
@@ -19,6 +20,7 @@ export default function AddData(props) {
     const [date, setDate] = useState(null);
     const [text, setText] = useState('');
     const [textArea, setTextArea] = useState('');
+    const [inputNumber, setInputNumber] = useState(null);
 
     //controlo el estado del input con el form data porque solo uso un State
     const InputChange = (e) => {
@@ -58,7 +60,7 @@ export default function AddData(props) {
             className='bg__card'
         >
             <section className='flex flex-column gap-3'>
-                {props.configInputsMachinary.map((inputConfig) => {
+                {props.configInputs.map((inputConfig) => {
                     
                     switch (inputConfig.type) {
                         case 'text':
@@ -128,6 +130,19 @@ export default function AddData(props) {
                                         rows={5} 
                                         cols={30} 
                                         className='bg-transparent outline__color--inputs'    
+                                    />
+                                </div>
+                            )
+
+                        case 'number':
+                            return (
+                                <div className="flex flex-column gap-2">
+                                    <label htmlFor="integeronly" className="font-bold block mb-2">{inputConfig.label}</label>
+                                    <InputNumber 
+                                        inputId="integeronly" 
+                                        value={inputNumber} 
+                                        onValueChange={(e) => setInputNumber(e.value)} 
+                                        inputClassName='bg-transparent outline__color--inputs w-full'
                                     />
                                 </div>
                             )

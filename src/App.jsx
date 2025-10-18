@@ -7,42 +7,40 @@ import Menu from './components/Menu/Menu'
 import BreadCrumbRoute from "./components/BreadCrumbRoute/BreadCrumbRoute";
 import { CSSTransition } from "react-transition-group";
 
-
-
 function App() {
   const [menuVisible, setMenuVisible] = useState(true);
   const nodeRef = useRef(null);
+
   return (
-    <div className = "flex " >
-        <CSSTransition
-          in={menuVisible}
-          timeout={300}
-          classNames="slide-menu"
-          mountOnEnter
-          unmountOnExit
-          nodeRef={nodeRef}
-        >
-          <div
-            ref={nodeRef}
-            className="fixed top-0 left-0 z-50 h-full"
-            style={{ width: "17.5rem" }}
-          >
-            <Menu />
-          </div>
-        </CSSTransition>
+    <div className="flex min-h-screen">
       
-        <div 
-          className={`flex flex-column flex-1 min-h-screen content-area ${menuVisible ? "expanded" : "collapsed"}`}>
-          <Header toggleMenu={() => setMenuVisible(prev => !prev)} />
-          <div className='px-5 pt-3'>
-            <BreadCrumbRoute />
-          </div>
-          <div className="p-5 min-h-screen" >
-            <Outlet />
-          </div>
-          <Footer />
-        </div >
+      <CSSTransition
+        in={menuVisible}
+        timeout={300}
+        classNames="slide-menu"
+        unmountOnExit
+        nodeRef={nodeRef}
+      >
+        <div
+          ref={nodeRef}
+          className="flex-shrink-0 h-screen" 
+          style={{ width: "17.5rem" }} 
+        >
+          <Menu />
+        </div>
+      </CSSTransition>
+      
+      <div className={`flex flex-column flex-1 min-h-screen overflow-x-hidden ${menuVisible ? "expanded" : "collapsed"}`}>
+        <Header toggleMenu={() => setMenuVisible(prev => !prev)} />
+        <div className='px-5 pt-3'>
+          <BreadCrumbRoute />
+        </div>
+        <div className="p-5 flex-1">
+          <Outlet />
+        </div>
+        <Footer />
       </div>
+    </div>
   )
 }
 
