@@ -9,28 +9,15 @@ import { CSSTransition } from "react-transition-group";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(true);
-  const nodeRef = useRef(null);
-
+  
   return (
     <div className="flex min-h-screen">
       
-      <CSSTransition
-        in={menuVisible}
-        timeout={300}
-        classNames="slide-menu"
-        unmountOnExit
-        nodeRef={nodeRef}
-      >
-        <div
-          ref={nodeRef}
-          className="flex-shrink-0 h-screen" 
-          style={{ width: "17.5rem" }} 
-        >
-          <Menu />
-        </div>
-      </CSSTransition>
+      <div className={`menu-container ${!menuVisible ? 'menu-hidden' : ''}`}>
+        <Menu />
+      </div>
       
-      <div className={`flex flex-column flex-1 min-h-screen overflow-x-hidden ${menuVisible ? "expanded" : "collapsed"}`}>
+      <div className="flex flex-column flex-1 min-h-screen overflow-x-hidden">
         <Header toggleMenu={() => setMenuVisible(prev => !prev)} />
         <div className='px-5 pt-3'>
           <BreadCrumbRoute />
@@ -43,5 +30,4 @@ function App() {
     </div>
   )
 }
-
 export default App;

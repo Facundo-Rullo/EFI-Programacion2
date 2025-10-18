@@ -1,40 +1,20 @@
-/* Transicion para ocultar el PanelMenu usa CSSTransition */
-.slide-menu-enter {
+/* Contenedor del menú (sin cambios) */
+.menu-container {
+  flex-shrink: 0;
+  width: 17.5rem;
+  height: 100vh;
+  transform: translateX(0);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu-container.menu-hidden {
+  width: 0;
   transform: translateX(-100%);
-  opacity: 0;
-}
-.slide-menu-enter-active {
-  transform: translateX(0);
-  opacity: 1;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-.slide-menu-enter-done {
-  transform: translateX(0);
-  opacity: 1;
 }
 
-.slide-menu-exit {
-  transform: translateX(0);
-  opacity: 1;
-}
-.slide-menu-exit-active {
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
 
-/*Transicion para mover el contenido, header y footer a la izquierda cuando se oculta el PanelMenu */
-.content-area {
-  transition: margin-left 0.3s ease-in-out;
-}
-
-.content-area.expanded {
-  margin-left: 17.5rem;
-}
-
-.content-area.collapsed {
-  margin-left: 0;
-}
 
 /* Clases Generales*/
 .bg__card { /*Fondo de las tarjetas "Card"*/
