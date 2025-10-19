@@ -32,4 +32,7 @@
     /* Yellow */
     --yellow_600: #e2b00b;
 
+    --success: #28a745;
+    --warning: #ffc107;
+
 }

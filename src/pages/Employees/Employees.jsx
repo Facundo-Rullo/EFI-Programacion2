@@ -3,6 +3,7 @@ import AddData from '../../components/AddData/AddData'
 import Grilla from '../../components/Grilla/Grilla'
 import { Button } from 'primereact/button';
 import { Tag } from 'primereact/tag';
+import { Card } from 'primereact/card';
 
 import { mockEmpleados } from '../../Data/mockData';
 
@@ -68,7 +69,7 @@ export default function Employees() {
       { key: 'estado', field: 'estado',  header: 'Estado', body: estadoBodyTemplate, exportable: false},
   ]
   return (
-    <div>
+    <Card className='bg__card'>
       <AddData 
           visible={visible} 
           setVisible={setVisible}
@@ -80,6 +81,6 @@ export default function Employees() {
         btnTitle={'Nuevo Empleado'}
         data={employeesData}
       />
-    </div>
+    </Card>
   )
 }

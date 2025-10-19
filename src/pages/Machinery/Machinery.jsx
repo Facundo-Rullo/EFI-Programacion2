@@ -40,6 +40,11 @@ export default function GestionMaquinaria() {
         setHistorialVisible(true);
     };
     
+    // Template para la columna de estado
+    const estadoBodyTemplate = (rowData) => {
+        return <Tag value={rowData.estado} severity={getSeverity(rowData.estado)} />;
+    };
+
     // Función para obtener el color del Tag según el estado
     const getSeverity = (estado) => {
         switch (estado) {
@@ -63,11 +68,6 @@ export default function GestionMaquinaria() {
                 <Button icon="pi pi-trash" className="p-button-danger" tooltip="Eliminar" />
             </div>
         );
-    };
-
-    // Template para la columna de estado
-    const estadoBodyTemplate = (rowData) => {
-        return <Tag value={rowData.estado} severity={getSeverity(rowData.estado)} />;
     }; 
 
     const imageBodyTemplate = (rowData) => {

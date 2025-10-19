@@ -61,7 +61,7 @@ export default function Grilla(props) {
 
     return (
         <div className='w-full overflow-x-auto'>
-            <Toolbar className="mb-4 bg-transparent border-none pt-0" start={leftButtonAdd} end={endFilter}></Toolbar>
+            <Toolbar className="mb-4 bg-transparent border-none pt-2" start={leftButtonAdd} end={endFilter}></Toolbar>
             <DataTable 
                 value={props.data} 
                 dataKey="id" 

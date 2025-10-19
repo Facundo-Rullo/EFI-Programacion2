@@ -132,3 +132,108 @@ export const mockMaquinaria = [
       fotoUrl: "https://i.pravatar.cc/150?u=103"
     }
   ];
+
+  export const stockData = [
+    {
+      id: 101,
+      sku: 'SEM-TRI-001',
+      producto: 'Semilla de Trigo - Variedad Baguette',
+      categoria: 'Semillas',
+      ubicacion: 'Silo 2A',
+      cantidadActual: 1200, // kg
+      stockMinimo: 500, // kg
+      estado: 'En Stock'
+    },
+    {
+      id: 102,
+      sku: 'FER-NIT-004',
+      producto: 'Fertilizante Nitrogenado Avanzado',
+      categoria: 'Fertilizantes',
+      ubicacion: 'Depósito Central',
+      cantidadActual: 450, // bolsas
+      stockMinimo: 500, // bolsas
+      estado: 'Bajo Stock'
+    },
+    {
+      id: 103,
+      sku: 'REP-FIL-AIR-015',
+      producto: 'Filtro de Aire para Cosechadora',
+      categoria: 'Repuestos Maquinaria',
+      ubicacion: 'Taller',
+      cantidadActual: 8,
+      stockMinimo: 10,
+      estado: 'Bajo Stock'
+    },
+    {
+      id: 104,
+      sku: 'AGQ-GLI-002',
+      producto: 'Glifosato Concentrado',
+      categoria: 'Agroquímicos',
+      ubicacion: 'Depósito Químicos',
+      cantidadActual: 75, // litros
+      stockMinimo: 50, // litros
+      estado: 'En Stock'
+    },
+    {
+      id: 105,
+      sku: 'REP-CUC-007',
+      producto: 'Cuchilla de Corte para Plataforma',
+      categoria: 'Repuestos Maquinaria',
+      ubicacion: 'Taller',
+      cantidadActual: 0,
+      stockMinimo: 15,
+      estado: 'Agotado'
+    },
+    {
+      id: 106,
+      sku: 'SEM-SOJ-003',
+      producto: 'Semilla de Soja - Ciclo Corto',
+      categoria: 'Semillas',
+      ubicacion: 'Silo 3B',
+      cantidadActual: 2500, // kg
+      stockMinimo: 800, // kg
+      estado: 'En Stock'
+    },
+    {
+      id: 107,
+      sku: 'ACE-MOT-1540',
+      producto: 'Aceite de Motor 15W40',
+      categoria: 'Lubricantes',
+      ubicacion: 'Taller',
+      cantidadActual: 22, // bidones
+      stockMinimo: 20, // bidones
+      estado: 'En Stock'
+    },
+    {
+      id: 108,
+      sku: 'REP-COR-001',
+      producto: 'Correa de Transmisión para Tractor',
+      categoria: 'Repuestos Maquinaria',
+      ubicacion: 'Taller',
+      cantidadActual: 3,
+      stockMinimo: 5,
+      estado: 'Bajo Stock'
+    },
+    {
+      id: 109,
+      sku: 'FER-FOS-001',
+      producto: 'Fertilizante Fosfatado',
+      categoria: 'Fertilizantes',
+      ubicacion: 'Depósito Central',
+      cantidadActual: 0,
+      stockMinimo: 200, // bolsas
+      estado: 'Agotado'
+    },
+    {
+      id: 110,
+      sku: 'SEM-MAI-005',
+      producto: 'Semilla de Maíz - Híbrido DK72',
+      categoria: 'Semillas',
+      ubicacion: 'Silo 1A',
+      cantidadActual: 980, // kg
+      stockMinimo: 1000, // kg
+      estado: 'Bajo Stock'
+    }
+  ];
+
+  
