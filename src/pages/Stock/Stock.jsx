@@ -1,13 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import AddData from '../../components/AddData/AddData'
 import Grilla from '../../components/Grilla/Grilla'
+import StockMovements from './Views/StockMovements';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import { Tag } from 'primereact/tag';
+import { Dialog } from 'primereact/dialog';
 
 import { stockData } from '../../Data/mockData';
 
 export default function Stock() {
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [isHistoryVisible, setIsHistoryVisible] = useState(false);
+
+    const openHistory = (product) => {
+        setSelectedProduct(product);
+        setIsHistoryVisible(true);
+    }
+
     const [stock, setStock] = useState([]);
     useEffect(() => {
         // Simulamos la carga de datos desde una api pero los cargamos desde el js
@@ -36,10 +46,11 @@ export default function Stock() {
     ];
 
     // Template para la columna de acciones
-    const accionesBodyTemplate = () => {
+    const accionesBodyTemplate = (rowData) => {
         return (
             <div className="flex gap-2">
-                <Button icon="pi pi-wave-pulse" className="p-button-info" tooltip="Gestionar Stock" />
+                <Button icon="pi pi-wave-pulse" className="" tooltip="Gestionar Stock" />
+                <Button icon="pi pi-wrench" className="p-button-info" tooltip="Ver Movimientos" onClick={() => openHistory(rowData)}/>
                 <Button icon="pi pi-pencil" className="p-button-warning" tooltip="Editar" />
                 <Button icon="pi pi-trash" className="p-button-danger" tooltip="Eliminar" />
             </div> 
@@ -67,11 +78,11 @@ export default function Stock() {
 
     const configColumnsGrilla = [
         { key: 'acciones', field: 'acciones',  header: 'Acciones', body: accionesBodyTemplate, exportable: false },
-        { key: 'sku', field: 'producto',  header: 'Producto' },
-        { key: 'sku', field: 'ubicacion',  header: 'Ubicacion' },
-        { key: 'sku', field: 'cantidadActual',  header: 'Cantidad Actual' },
-        { key: 'sku', field: 'stockMinimo',  header: 'Stock Minimo'},
-        { key: 'sku', field: 'estado',  header: 'Estado', body: estadoBodyTemplate, exportable: false},
+        { key: 'skuProducto', field: 'producto',  header: 'Producto' },
+        { key: 'skuUbicacion', field: 'ubicacion',  header: 'Ubicacion' },
+        { key: 'skuCantActual', field: 'cantidadActual',  header: 'Cantidad Actual' },
+        { key: 'skuStockMinimo', field: 'stockMinimo',  header: 'Stock Minimo'},
+        { key: 'skuEstado', field: 'estado',  header: 'Estado', body: estadoBodyTemplate, exportable: false},
     ]
 
 
@@ -106,6 +117,15 @@ export default function Stock() {
                 data={stock}
             />
         </Card>
+        <Dialog 
+            header={`Historial de Movimientos: ${selectedProduct?.producto}`} 
+            visible={isHistoryVisible} 
+            onHide={() => setIsHistoryVisible(false)}
+            style={{ width: '75vw' }}
+            maximizable
+        >
+            {selectedProduct && <StockMovements productId={selectedProduct.id} />}
+        </Dialog>
     </div>
   );
 }

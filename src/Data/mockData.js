@@ -236,4 +236,110 @@ export const mockMaquinaria = [
     }
   ];
 
+  // Archivo: /data/movementsData.js
+
+export const movementsData = [
+  // --- Historial para "Semilla de Trigo" (ID: 101) ---
+  // Cantidad Actual: 1200
+  {
+    movementId: 2001,
+    productId: 101,
+    date: '2025-09-05',
+    type: 'Ingreso por Compra',
+    quantity: 1500,
+    user: 'jPerez',
+    notes: 'Remito N° 4532 - Proveedor Agrosur'
+  },
+  {
+    movementId: 2002,
+    productId: 101,
+    date: '2025-10-10',
+    type: 'Salida a Producción',
+    quantity: -300,
+    user: 'fGonzalez',
+    notes: 'Siembra en lote 7B'
+  },
+
+  // --- Historial para "Fertilizante Nitrogenado" (ID: 102) ---
+  // Cantidad Actual: 450
+  {
+    movementId: 2003,
+    productId: 102,
+    date: '2025-08-15',
+    type: 'Ingreso por Compra',
+    quantity: 1000,
+    user: 'jPerez',
+    notes: 'Factura N° A-001-1234'
+  },
+  {
+    movementId: 2004,
+    productId: 102,
+    date: '2025-09-20',
+    type: 'Salida a Producción',
+    quantity: -550,
+    user: 'fGonzalez',
+    notes: 'Aplicación en lote 3A y 4C'
+  },
+
+  // --- Historial para "Filtro de Aire" (ID: 103) ---
+  // Cantidad Actual: 8
+  {
+    movementId: 2005,
+    productId: 103,
+    date: '2025-07-01',
+    type: 'Ingreso por Compra',
+    quantity: 10,
+    user: 'mGarcia',
+    notes: 'Compra para stock de taller'
+  },
+  {
+    movementId: 2006,
+    productId: 103,
+    date: '2025-09-25',
+    type: 'Salida a Producción',
+    quantity: -1,
+    user: 'mGarcia',
+    notes: 'Mantenimiento Cosechadora Case'
+  },
+  {
+    movementId: 2007,
+    productId: 103,
+    date: '2025-10-15',
+    type: 'Salida a Producción',
+    quantity: -1,
+    user: 'mGarcia',
+    notes: 'Mantenimiento Tractor John Deere'
+  },
+  
+  // --- Historial para "Cuchilla de Corte" (ID: 105) ---
+  // Cantidad Actual: 0
+  {
+    movementId: 2008,
+    productId: 105,
+    date: '2025-06-10',
+    type: 'Ingreso por Compra',
+    quantity: 20,
+    user: 'jPerez',
+    notes: 'Stock inicial de repuestos'
+  },
+  {
+    movementId: 2009,
+    productId: 105,
+    date: '2025-08-22',
+    type: 'Pérdida / Merma',
+    quantity: -2,
+    user: 'sistema',
+    notes: 'Daño en depósito, no utilizables'
+  },
+  {
+    movementId: 2010,
+    productId: 105,
+    date: '2025-10-01',
+    type: 'Salida a Producción',
+    quantity: -18,
+    user: 'mGarcia',
+    notes: 'Reemplazo completo en plataforma de corte'
+  }
+];
+
   
