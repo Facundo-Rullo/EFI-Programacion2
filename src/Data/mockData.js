@@ -342,4 +342,158 @@ export const movementsData = [
   }
 ];
 
+// /data/lotesData.js
+
+export const lotesData = [
+  {
+    id: 'L001',
+    nombre: 'Lote 5A - Norte',
+    establecimiento: 'La Aurora',
+    hectareas: 120, // Ha
+    cultivoActual: 'Soja de Primera',
+    estado: 'Crecimiento / Vegetativo',
+    fechaTrabajo: '2025-10-05',
+    ultimoRendimiento: 42 // qq/Ha (de la campaña anterior)
+  },
+  {
+    id: 'L002',
+    nombre: 'Bajo Dulce',
+    establecimiento: 'La Aurora',
+    hectareas: 85, // Ha
+    cultivoActual: 'Maíz Tardío',
+    estado: 'Siembra',
+    fechaTrabajo: '2025-12-15', // Fecha planificada o de inicio
+    ultimoRendimiento: 95 // qq/Ha
+  },
+  {
+    id: 'L003',
+    nombre: 'La Cuchilla',
+    establecimiento: 'Don Manuel',
+    hectareas: 210, // Ha
+    cultivoActual: 'Trigo',
+    estado: 'Cosecha',
+    fechaTrabajo: '2025-06-20',
+    ultimoRendimiento: 55 // qq/Ha
+  },
+  {
+    id: 'L004',
+    nombre: 'El Chañar 3',
+    establecimiento: 'Don Manuel',
+    hectareas: 95, // Ha
+    cultivoActual: 'Girasol',
+    estado: 'Crecimiento / Vegetativo',
+    fechaTrabajo: '2025-09-30',
+    ultimoRendimiento: 28 // qq/Ha
+  },
+  {
+    id: 'L005',
+    nombre: 'Lote 7B - Sur',
+    establecimiento: 'La Aurora',
+    hectareas: 150, // Ha
+    cultivoActual: 'Libre',
+    estado: 'Libre',
+    fechaTrabajo: null,
+    ultimoRendimiento: 45 // qq/Ha (de la campaña anterior)
+  }
+];
+
+// /data/historialLotesData.js
+
+export const historialLotesData = [
+  // --- HISTORIAL PARA LOTE L001 (Soja de Primera) ---
+  {
+    actividadId: 3001,
+    loteId: 'L001',
+    fecha: '2025-09-15',
+    tipoActividad: 'Fertilización',
+    descripcion: 'Aplicación de fertilizante base antes de la siembra.',
+    insumosUtilizados: [
+      { producto: 'Fertilizante Fosfatado', cantidad: '12000 kg' } // 100 kg/Ha
+    ],
+    costoTotal: 9600, // USD
+    responsable: 'fGonzalez'
+  },
+  {
+    actividadId: 3002,
+    loteId: 'L001',
+    fecha: '2025-10-05',
+    tipoActividad: 'Siembra',
+    descripcion: 'Siembra de Soja de Primera con sembradora John Deere.',
+    insumosUtilizados: [
+      { producto: 'Semilla de Soja - Ciclo Corto', cantidad: '8400 kg' } // 70 kg/Ha
+    ],
+    costoTotal: 7560, // USD
+    responsable: 'fGonzalez'
+  },
+  {
+    actividadId: 3003,
+    loteId: 'L001',
+    fecha: '2025-11-20',
+    tipoActividad: 'Monitoreo de Plagas',
+    descripcion: 'Recorrida general, se detectó baja incidencia de oruga medidora.',
+    insumosUtilizados: [],
+    costoTotal: 200, // USD (costo de la recorrida)
+    responsable: 'aGarcia'
+  },
+
+  // --- HISTORIAL PARA LOTE L003 (Trigo) ---
+  {
+    actividadId: 3004,
+    loteId: 'L003',
+    fecha: '2025-06-20',
+    tipoActividad: 'Siembra',
+    descripcion: 'Siembra de Trigo variedad Baguette.',
+    insumosUtilizados: [
+      { producto: 'Semilla de Trigo - Variedad Baguette', cantidad: '25200 kg' } // 120 kg/Ha
+    ],
+    costoTotal: 11340, // USD
+    responsable: 'jPerez'
+  },
+  {
+    actividadId: 3005,
+    loteId: 'L003',
+    fecha: '2025-09-10',
+    tipoActividad: 'Fertilización',
+    descripcion: 'Aplicación de Nitrógeno en macollaje.',
+    insumosUtilizados: [
+      { producto: 'Fertilizante Nitrogenado Avanzado', cantidad: '21000 kg' } // 100 kg/Ha
+    ],
+    costoTotal: 18900, // USD
+    responsable: 'jPerez'
+  },
+  {
+    actividadId: 3006,
+    loteId: 'L003',
+    fecha: '2025-12-05',
+    tipoActividad: 'Cosecha',
+    descripcion: 'Inicio de cosecha con dos cosechadoras. Rendimiento promedio 58 qq/Ha.',
+    insumosUtilizados: [],
+    costoTotal: 25200, // USD (costo de contratista)
+    responsable: 'jPerez'
+  },
+
+  // --- HISTORIAL PARA LOTE L005 (Libre) ---
+  {
+    actividadId: 3007,
+    loteId: 'L005',
+    fecha: '2025-08-01',
+    tipoActividad: 'Análisis de Suelo',
+    descripcion: 'Muestreo de suelo para planificación de campaña siguiente.',
+    insumosUtilizados: [],
+    costoTotal: 500, // USD
+    responsable: 'aGarcia'
+  },
+  {
+    actividadId: 3008,
+    loteId: 'L005',
+    fecha: '2025-09-05',
+    tipoActividad: 'Aplicación de Herbicida',
+    descripcion: 'Control de malezas en barbecho químico.',
+    insumosUtilizados: [
+      { producto: 'Glifosato Concentrado', cantidad: '450 litros' } // 3 L/Ha
+    ],
+    costoTotal: 3150, // USD
+    responsable: 'fGonzalez'
+  }
+];
   

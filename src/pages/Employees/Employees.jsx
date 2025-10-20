@@ -22,14 +22,14 @@ export default function Employees() {
     };
 
   const configInputs = [
-      { id: 'legajo', name: 'Legajo', label: 'Legajo', type: 'text'},
-      { id: 'nombre', name: 'Nombre', label: 'Nombre', type: 'text'},
-      { id: 'apellido', name: 'Apellido', label: 'Apellido', type: 'text'},
-      { id: 'dni', name: 'DNI', label: 'DNI', type: 'text'},
-      { id: 'puesto', name: 'Puesto', label: 'Puesto', type: 'text'},
-      { id: 'area', name: 'Area', label: 'Area', type: 'text'},
-      { id: 'telefono', name: 'Telefono', label: 'Telefono', type: 'text'},
-      { id: 'estado', name: 'Estado', label: 'Estado', type: 'text'},
+    { id: 'dni', name: 'DNI', label: 'DNI', type: 'text'},
+    { id: 'nombre', name: 'Nombre', label: 'Nombre', type: 'text'},
+    { id: 'apellido', name: 'Apellido', label: 'Apellido', type: 'text'},
+    { id: 'telefono', name: 'Telefono', label: 'Telefono', type: 'text'},
+    { id: 'legajo', name: 'Legajo', label: 'Legajo', type: 'text'},
+    { id: 'puesto', name: 'Puesto', label: 'Puesto', type: 'text'},
+    { id: 'area', name: 'Area', label: 'Area', type: 'text'},
+    { id: 'estado', name: 'Estado', label: 'Estado', type: 'text'},
   ];
 
   // Función para obtener el color del Tag según el estado
@@ -74,6 +74,7 @@ export default function Employees() {
           visible={visible} 
           setVisible={setVisible}
           configInputs={configInputs}
+          title={'Agregar Nuevo Empleado'}
       />
       <Grilla
         addDialog={addMachinaryDialog}

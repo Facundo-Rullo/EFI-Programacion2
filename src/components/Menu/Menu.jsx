@@ -11,6 +11,7 @@ import ItemEmployees from './Items/ItemEmployees';
 import ItemInsumos from './Items/ItemInsumos';
 import ItemUsers from './Items/ItemUsers';
 import ItemRoles from './Items/ItemRoles';
+import ItemLotes from './Items/ItemLotes';
 
 export default function Menu() {
   return (
@@ -38,6 +39,9 @@ export default function Menu() {
           </div>
           <div className='mt-4'>
             <ItemInsumos/>
+          </div>
+          <div className='mt-4'>
+            <ItemLotes/>
           </div>
           <div className='mt-4'>
             <ItemUsers/>

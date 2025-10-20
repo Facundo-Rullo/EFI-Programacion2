@@ -91,6 +91,7 @@ export default function GestionMaquinaria() {
                 visible={visible} 
                 setVisible={setVisible}
                 configInputs={configInputs}
+                title={'Agregar Nuevo Lote'}
             />
             <Grilla
                 addDialog={addMachinaryDialog}

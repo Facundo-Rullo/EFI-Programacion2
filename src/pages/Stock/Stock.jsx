@@ -109,6 +109,7 @@ export default function Stock() {
                 visible={visible} 
                 setVisible={setVisible}
                 configInputs={configInputs}
+                title={'Agregar Nuevo Producto'}
             />
             <Grilla
                 addDialog={addStockDialog}

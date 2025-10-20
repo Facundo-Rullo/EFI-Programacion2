@@ -52,7 +52,7 @@ export default function AddData(props) {
   return (
     <div>
         <Dialog 
-            header="Agregar Nueva Maquinaria" 
+            header={props.title}
             visible={props.visible} 
             style={{ width: '50vw'}} 
             onHide={() => {if (!props.visible) return; props.setVisible(false);}} 

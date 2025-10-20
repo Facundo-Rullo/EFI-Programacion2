@@ -32,7 +32,7 @@ export default function Maintenance() {
         return (
             <div className="flex gap-2">
                 <Button icon="pi pi-pencil" className="p-button-warning" tooltip="Editar" />
-                <Button icon="pi pi-trash" className="p-button-danger" tooltip="Eliminar" />
+                {/* <Button icon="pi pi-trash" className="p-button-danger" tooltip="Eliminar" /> */}
             </div>
         );
     };
@@ -54,6 +54,7 @@ export default function Maintenance() {
                 visible={visible} 
                 setVisible={setVisible}
                 configInputs={configInputs}
+                title={'Agregar Nuevo Mantenimiento'}
             />
             <Grilla
                 addDialog={addMintenanceDialog}

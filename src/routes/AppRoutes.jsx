@@ -18,6 +18,7 @@ import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import Stock from "../pages/Stock/Stock";
 import Users from "../pages/Security/Users/Users";
 import Roles from "../pages/Security/Roles/Roles";
+import Lotes from "../pages/Lotes/Lotes";
 
 const AppRoutes = ({ userLoggedIn }) => {
   return (
@@ -45,6 +46,7 @@ const AppRoutes = ({ userLoggedIn }) => {
         <Route path="/stock" element={<Stock />} />
         <Route path="/users" element={<Users />} />
         <Route path="/roles" element={<Roles />} />
+        <Route path="/lotes" element={<Lotes />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />
