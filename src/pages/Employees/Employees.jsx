@@ -53,7 +53,7 @@ export default function Employees() {
     return (
         <div className="flex gap-2">
             <Button icon="pi pi-pencil" className="p-button-warning" tooltip="Editar" />
-            <Button icon="pi pi-trash" className="p-button-danger" tooltip="Eliminar" />
+            <Button icon="pi pi-ban" className="p-button-danger" tooltip="Desactivar" />
         </div>
     );
   };

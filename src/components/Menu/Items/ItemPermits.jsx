@@ -4,7 +4,7 @@ import MenuCSS from '../Menu.module.css'
 import { PanelMenu } from 'primereact/panelmenu';
 import { Link } from 'react-router-dom';
 
-export default function ItemRoles() {
+export default function ItemPermits() {
   
   const itemSimple = (item) => {
     const location = useLocation();
@@ -38,10 +38,10 @@ export default function ItemRoles() {
     
   const items = [
     {
-        label: 'Roles',
-        icon: 'pi pi-cog',
+        label: 'Permisos',
+        icon: 'pi pi-lock',
         template: itemSimple,
-        path: '/roles',
+        path: '/permits',
     },
 ];
 
