@@ -7,7 +7,7 @@ import { Button } from 'primereact/button';
 import { Tag } from 'primereact/tag';
 import { Dialog } from 'primereact/dialog';
 
-import { historialLotesData, lotesData } from '../../Data/mockData';
+import { lotesData } from '../../Data/mockData';
 
 export default function Lotes() {
     const [selectedLote, setSelectedLote] = useState(null);
@@ -63,6 +63,7 @@ export default function Lotes() {
     const accionesBodyTemplate = (rowData) => {
         return (
             <div className="flex gap-2">
+                <Button icon="pi pi-wave-pulse" className="" tooltip="Gestionar Lote" />
                 <Button icon="pi pi-wrench" className="p-button-info" tooltip="Ver Historial" onClick={() => openHistory(rowData)}/>
                 <Button icon="pi pi-pencil" className="p-button-warning" tooltip="Editar" />
                 <Button icon="pi pi-trash" className="p-button-danger" tooltip="Eliminar" />
