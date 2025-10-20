@@ -12,7 +12,12 @@ import { mockMaquinaria, mockMantenimientos } from '../../Data/mockData';
 export default function GestionMaquinaria() {
     const [maquinaSeleccionada, setMaquinaSeleccionada] = useState(null);
     const [historialVisible, setHistorialVisible] = useState(false);
-
+    // Función para abrir el diálogo de historial
+    const verHistorial = (maquina) => {
+        setMaquinaSeleccionada(maquina);
+        setHistorialVisible(true);
+    };
+    
     const [maquinas, setMaquinas] = useState([]);
     useEffect(() => {
         // Simulamos la carga de datos desde una api pero los cargamos desde el js
@@ -32,13 +37,6 @@ export default function GestionMaquinaria() {
         { id: 'state', name: 'Estado', label: 'Estado', type: 'text'},
         { id: 'foto', label: 'Foto de la Máquina', type: 'file' }
     ];
-
-    
-    // Función para abrir el diálogo de historial
-    const verHistorial = (maquina) => {
-        setMaquinaSeleccionada(maquina);
-        setHistorialVisible(true);
-    };
     
     // Template para la columna de estado
     const estadoBodyTemplate = (rowData) => {

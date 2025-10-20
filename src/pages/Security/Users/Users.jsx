@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import AddData from '../../../components/AddData/AddData'
 import Grilla from '../../../components/Grilla/Grilla'
+import AssingANewPassowrd from '../../../components/AssignANewPassword/AssignANewPassword'
 import { Button } from 'primereact/button'
 import { Tag } from 'primereact/tag';
 import { Card } from 'primereact/card'
@@ -19,6 +20,12 @@ export default function Users() {
   const addUserDialog = () => {
     setVisible(true);
   };
+
+  const [assingPass, setAssingPass] = useState(false);
+  const AssignANewPass = () => {
+    setAssingPass(true);
+  };
+
 
   const configInputs = [
     { id: 'nombre', name: 'Nombre', label: 'Nombre', type: 'text'},
@@ -52,14 +59,14 @@ export default function Users() {
   };
 
   // Template para la columna de acciones
-  const accionesBodyTemplate = () => {
+  const accionesBodyTemplate = (rowData) => {
       return (
           <div className="flex gap-2">
               <Button icon="pi pi-pencil" className="p-button-warning" tooltip="Editar" />
               <Button icon="pi pi-ban" className="p-button-danger" tooltip="Desactivar" />
               <Button icon="pi pi-cog" className="" tooltip="Roles" />
               <Button icon="pi pi-lock" className="p-button-info" tooltip="Permisos"/>
-              <Button icon="pi pi-key" className="p-button-success" tooltip="Asignar contraseña nueva"/>
+              <Button icon="pi pi-key" className="p-button-success" tooltip="Asignar contraseña nueva" onClick={() => AssignANewPass(rowData)}/>
           </div>
       );
   };
@@ -101,15 +108,11 @@ export default function Users() {
               data={lotes}
           />
       </Card>
-      {/* <Dialog 
-          header={`Historial de Actividades: ${selectedLote?.nombre}`} 
-          visible={isHistoryVisible} 
-          onHide={() => setIsHistoryVisible(false)}
-          style={{ width: '85vw' }} // Un poco más ancho por la cantidad de info
-          maximizable
-          >
-          {selectedLote && <LotesMovements loteId={selectedLote.id} />}
-      </Dialog> */}
+      <AssingANewPassowrd
+        visible={assingPass}
+        onHide={() => setAssingPass(false)}
+      />
+      
     </div>
   )
 }
