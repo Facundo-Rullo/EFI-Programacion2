@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import AddData from '../../../components/AddData/AddData'
 import Grilla from '../../../components/Grilla/Grilla'
 import AssingANewPassowrd from '../../../components/AssignANewPassword/AssignANewPassword'
+import PermitsModal from '../../../components/PermitsModal/PermitsModal'
 import { Button } from 'primereact/button'
 import { Tag } from 'primereact/tag';
 import { Card } from 'primereact/card'
@@ -10,11 +12,17 @@ import { Image } from 'primereact/image';
 import { mockEmpleados } from '../../../Data/mockData'
 
 export default function Users() {
+
+  const navigate = useNavigate()
+  const irAAssignPermitsUser = () => {
+    navigate('/assignPermitsUser')
+  }
+
   const [lotes, setLotes] = useState([]);
-    useEffect(() => {
-        // Simulamos la carga de datos desde una api pero los cargamos desde el js
-        setLotes(mockEmpleados); 
-    }, []);
+  useEffect(() => {
+      // Simulamos la carga de datos desde una api pero los cargamos desde el js
+      setLotes(mockEmpleados); 
+  }, []);
 
   const [visible, setVisible] = useState(false);
   const addUserDialog = () => {
@@ -25,7 +33,6 @@ export default function Users() {
   const AssignANewPass = () => {
     setAssingPass(true);
   };
-
 
   const configInputs = [
     { id: 'nombre', name: 'Nombre', label: 'Nombre', type: 'text'},
@@ -65,7 +72,7 @@ export default function Users() {
               <Button icon="pi pi-pencil" className="p-button-warning" tooltip="Editar" />
               <Button icon="pi pi-ban" className="p-button-danger" tooltip="Desactivar" />
               <Button icon="pi pi-cog" className="" tooltip="Roles" />
-              <Button icon="pi pi-lock" className="p-button-info" tooltip="Permisos"/>
+              <Button icon="pi pi-lock" className="p-button-info" tooltip="Permisos" onClick={() => irAAssignPermitsUser()}/>
               <Button icon="pi pi-key" className="p-button-success" tooltip="Asignar contraseña nueva" onClick={() => AssignANewPass(rowData)}/>
           </div>
       );
@@ -107,12 +114,12 @@ export default function Users() {
               btnTitle={'Nuevo Usuario'}
               data={lotes}
           />
-      </Card>
+      </Card> 
       <AssingANewPassowrd
         visible={assingPass}
         onHide={() => setAssingPass(false)}
       />
-      
     </div>
   )
+
 }

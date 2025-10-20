@@ -502,4 +502,40 @@ export const historialLotesData = [
     responsable: 'fGonzalez'
   }
 ];
+
+export const mockPermissionsAdded = [
+  {
+    id: 1,
+    nombre: 'Usuario',
+    descripcion: 'acceso especifico',
+  },
+  {
+    id: 2,
+    nombre: 'Reportes',
+    descripcion: 'acceso a reportes',
+  },
+  { 
+    id: 3,
+    nombre: 'Vistas',
+    descripcion: 'acceso a vistas',
+  },
+]
+
+export const mockPermissionsAdd = [
+  {
+    id: 1,
+    nombre: 'Administrador',
+    descripcion: 'acceso a todo',
+  },
+  {
+    id: 2,
+    nombre: 'Moderador',
+    descripcion: 'acceso parcial',
+  },
+  {
+    id: 3,
+    nombre: 'Seguridad',
+    descripcion: 'acceso a seguridad',
+  },
+]
   
