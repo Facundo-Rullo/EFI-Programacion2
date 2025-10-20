@@ -17,6 +17,9 @@ export default function Users() {
   const irAAssignPermitsUser = () => {
     navigate('/assignPermitsUser')
   }
+  const irAAssignRolesUser = () => {
+    navigate('/assignRoles')
+  }
 
   const [lotes, setLotes] = useState([]);
   useEffect(() => {
@@ -71,7 +74,7 @@ export default function Users() {
           <div className="flex gap-2">
               <Button icon="pi pi-pencil" className="p-button-warning" tooltip="Editar" />
               <Button icon="pi pi-ban" className="p-button-danger" tooltip="Desactivar" />
-              <Button icon="pi pi-cog" className="" tooltip="Roles" />
+              <Button icon="pi pi-cog" className="" tooltip="Roles" onClick={() => irAAssignRolesUser()}/>
               <Button icon="pi pi-lock" className="p-button-info" tooltip="Permisos" onClick={() => irAAssignPermitsUser()}/>
               <Button icon="pi pi-key" className="p-button-success" tooltip="Asignar contraseña nueva" onClick={() => AssignANewPass(rowData)}/>
           </div>

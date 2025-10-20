@@ -21,6 +21,7 @@ import Roles from "../pages/Security/Roles/Roles";
 import Permits from "../pages/Security/Permits/Permits";
 import Lotes from "../pages/Lotes/Lotes";
 import AssignPermitsUser from "../pages/Security/AssignPermitsUser/AssignPermitsUser";
+import AssignRolesUser from "../pages/Security/AssignRoleUser/AssignRoleUser";
 
 const AppRoutes = ({ userLoggedIn }) => {
   return (
@@ -51,6 +52,7 @@ const AppRoutes = ({ userLoggedIn }) => {
         <Route path="/roles" element={<Roles />} />
         <Route path="/permits" element={<Permits />} />
         <Route path="/assignPermitsUser" element={<AssignPermitsUser />} />
+        <Route path="/assignRoles" element={<AssignRolesUser />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />

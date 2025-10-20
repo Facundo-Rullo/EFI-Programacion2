@@ -10,7 +10,7 @@ import { InputIcon } from 'primereact/inputicon';
 import { InputText } from 'primereact/inputtext'; 
 import { Toast } from 'primereact/toast';
 
-import { mockPermissionsAdd, mockPermissionsAdded } from '../../../Data/mockData';
+import { mockRoleAdded, mockRolesAdd } from '../../../Data/mockData';
 
 export default function AssignPermitsUser() {
     const toast = useRef(null);
@@ -27,12 +27,12 @@ export default function AssignPermitsUser() {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        setProducts(mockPermissionsAdd);
+        setProducts(mockRoleAdded);
     }, []);
 
     const [productsAdded, setProductsAdded] = useState([]);
     useEffect(() => {
-        setProductsAdded(mockPermissionsAdded);
+        setProductsAdded(mockRolesAdd);
     }, []);
 
     // Template para la columna de acciones
@@ -47,7 +47,7 @@ export default function AssignPermitsUser() {
     const accionesBodyTemplateAdded = () => {
         return (
             <div className="flex gap-2">
-                <Button icon="pi pi-times" className="p-button-danger" tooltip="Eliminar Permiso" />
+                <Button icon="pi pi-times" className="p-button-danger" tooltip="Eliminar Rol" />
             </div>
         );
     };
@@ -64,7 +64,7 @@ export default function AssignPermitsUser() {
                         className='bg__buttons border-none text-white outline__color--buttons'    
                     />
                     <Dialog 
-                        header="Agregar Permiso" 
+                        header="Agregar Rol" 
                         visible={visible} 
                         style={{ width: '50vw' }} 
                         onHide={() => {if (!visible) return; setVisible(false); }}
@@ -85,7 +85,7 @@ export default function AssignPermitsUser() {
                             >
                                 <Column header="Acción" body={accionesBodyTemplateAdd}></Column>
                                 <Column field="id" header="ID"></Column>
-                                <Column field="nombre" header="Permiso"></Column>
+                                <Column field="nombre" header="Rol"></Column>
                                 <Column field="descripcion" header="Descrición"></Column>
                             </DataTable>
                         </div>
@@ -121,7 +121,7 @@ export default function AssignPermitsUser() {
                 >
                     <Column header="Acción" body={accionesBodyTemplateAdded} exportable={true} headerClassName='bg-transparent'></Column>
                     <Column field="id" header="ID" headerClassName='bg-transparent'></Column>
-                    <Column field="nombre" header="Permiso" headerClassName='bg-transparent'></Column>
+                    <Column field="nombre" header="Rol" headerClassName='bg-transparent'></Column>
                     <Column field="descripcion" header="Descrición" headerClassName='bg-transparent'></Column>
                 </DataTable>
             </div>

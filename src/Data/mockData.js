@@ -506,22 +506,40 @@ export const historialLotesData = [
 export const mockPermissionsAdded = [
   {
     id: 1,
-    nombre: 'Usuario',
-    descripcion: 'acceso especifico',
+    nombre: 'Cambiar Contraseña',
+    descripcion: 'acceso a cambiar la contraseña',
   },
   {
     id: 2,
-    nombre: 'Reportes',
-    descripcion: 'acceso a reportes',
+    nombre: 'Cambiar Foto',
+    descripcion: 'acceso a cambiar la foto',
   },
   { 
     id: 3,
-    nombre: 'Vistas',
-    descripcion: 'acceso a vistas',
+    nombre: 'Exportar',
+    descripcion: 'acceso a exportar PDF/Excel',
   },
 ]
 
 export const mockPermissionsAdd = [
+  {
+    id: 4,
+    nombre: 'EliminarBtn',
+    descripcion: 'acceso a boton eliminar',
+  },
+  {
+    id: 5,
+    nombre: 'EditarBtn',
+    descripcion: 'acceso a boton editar',
+  },
+  {
+    id: 6,
+    nombre: 'Seguridad',
+    descripcion: 'acceso a seguridad',
+  },
+]
+
+export const mockRolesAdd = [
   {
     id: 1,
     nombre: 'Administrador',
@@ -538,4 +556,21 @@ export const mockPermissionsAdd = [
     descripcion: 'acceso a seguridad',
   },
 ]
-  
+
+export const mockRoleAdded = [
+  {
+    id: 1,
+    nombre: 'Usuario',
+    descripcion: 'acceso especifico',
+  },
+  {
+    id: 2,
+    nombre: 'Reportes',
+    descripcion: 'acceso a reportes',
+  },
+  { 
+    id: 3,
+    nombre: 'Vistas',
+    descripcion: 'acceso a vistas',
+  },
+]
