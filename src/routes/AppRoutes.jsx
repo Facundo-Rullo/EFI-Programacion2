@@ -27,8 +27,7 @@ const AppRoutes = ({ userLoggedIn }) => {
   return (
     <Routes>
       {/* Rutas publicas de auth */}
-      {/* !!!!!!!!!!!!!!!!!!!!! Acomodar esta ruta !!!!!!!!!!!!!!!!!!!!! */}
-      <Route path="/" element={<Navigate to="/dashboard" />} />
+      <Route path="/" element={<Navigate to="/login" />} />
       <Route path="/login" element={userLoggedIn ? <Navigate to="/dashboard" /> : <Login />}/>
       <Route path="/recuperarContraseniaPaso1" element={<ForgotPasswordStep1 />} />
       <Route path="/recuperarContraseniaPaso2" element={<ForgotPasswordStep2 />} />

@@ -559,18 +559,84 @@ export const mockRolesAdd = [
 
 export const mockRoleAdded = [
   {
-    id: 1,
+    id: 4,
     nombre: 'Usuario',
     descripcion: 'acceso especifico',
   },
   {
-    id: 2,
+    id: 5,
     nombre: 'Reportes',
     descripcion: 'acceso a reportes',
   },
   { 
-    id: 3,
+    id: 6,
     nombre: 'Vistas',
     descripcion: 'acceso a vistas',
+  },
+]
+
+export const mockRoles = [
+  {
+    id: 1,
+    nombre: 'Administrador',
+    descripcion: 'acceso a todo',
+  },
+  {
+    id: 2,
+    nombre: 'Moderador',
+    descripcion: 'acceso parcial',
+  },
+  {
+    id: 3,
+    nombre: 'Seguridad',
+    descripcion: 'acceso a seguridad',
+  },
+  {
+    id: 4,
+    nombre: 'Usuario',
+    descripcion: 'acceso especifico',
+  },
+  {
+    id: 5,
+    nombre: 'Reportes',
+    descripcion: 'acceso a reportes',
+  },
+  { 
+    id: 6,
+    nombre: 'Vistas',
+    descripcion: 'acceso a vistas',
+  },
+]
+
+export const mockPermissions = [
+  {
+    id: 1,
+    nombre: 'Cambiar Contraseña',
+    descripcion: 'acceso a cambiar la contraseña',
+  },
+  {
+    id: 2,
+    nombre: 'Cambiar Foto',
+    descripcion: 'acceso a cambiar la foto',
+  },
+  { 
+    id: 3,
+    nombre: 'Exportar',
+    descripcion: 'acceso a exportar PDF/Excel',
+  },
+  {
+    id: 4,
+    nombre: 'EliminarBtn',
+    descripcion: 'acceso a boton eliminar',
+  },
+  {
+    id: 5,
+    nombre: 'EditarBtn',
+    descripcion: 'acceso a boton editar',
+  },
+  {
+    id: 6,
+    nombre: 'Seguridad',
+    descripcion: 'acceso a seguridad',
   },
 ]

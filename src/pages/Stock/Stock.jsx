@@ -42,7 +42,6 @@ export default function Stock() {
         { id: 'ubicacion', name: 'ubicacion', label: 'Ubicacion', type: 'text'},
         { id: 'cantidadActual', name: 'cantidadActual', label: 'Cantidad Actual', type: 'text'},
         { id: 'stockMinimo', name: 'stockMinimo', label: 'Stock Minimo', type: 'text'},
-        { id: 'estado', name: 'estado', label: 'Estado', type: 'text'},
     ];
 
     // Template para la columna de acciones

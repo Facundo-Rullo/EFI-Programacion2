@@ -21,6 +21,7 @@ export default function Maintenance() {
     
     const configInputs = [
         { id: 'fecha', name: 'Fecha', label: 'Fecha', type: 'date'},
+        { id: 'maquina', name: 'Maquina', label: 'Maquina', type: 'text'},
         { id: 'type', name: 'Tipo', label: 'Tipo', type: 'text'},
         { id: 'description', name: 'Description', label: 'Descripcion', type: 'textarea'},
         { id: 'responsable', name: 'Responsable', label: 'Responsable', type: 'text'},

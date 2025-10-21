@@ -12,7 +12,6 @@ import { Image } from 'primereact/image';
 import { mockEmpleados } from '../../../Data/mockData'
 
 export default function Users() {
-
   const navigate = useNavigate()
   const irAAssignPermitsUser = () => {
     navigate('/assignPermitsUser')

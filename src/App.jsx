@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="flex min-h-screen">
       
-      <div className={`menu-container ${!menuVisible ? 'menu-hidden' : ''}`}>
+      <div className={`menu-container fixed top-0 left-0 ${!menuVisible ? 'menu-hidden' : ''}`}>
         <Menu />
       </div>
       
-      <div className="flex flex-column flex-1 min-h-screen overflow-x-hidden">
+      <div className={`flex flex-column flex-1 min-h-screen overflow-x-hidden info-container ${!menuVisible ? 'info-left' : ''}`}>
         <Header toggleMenu={() => setMenuVisible(prev => !prev)} />
         <div className='px-5 pt-3'>
           <BreadCrumbRoute />
